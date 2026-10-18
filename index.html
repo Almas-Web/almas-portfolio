@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Almas Hossen - Python Backend Developer | Backend & DevOps Engineer</title>
+    <title>Almas Hossen - Python Backend, DevOps & AI Engineer</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -55,7 +55,6 @@
     ========================== -->
 
     <div class="fixed top-0 left-1/4 w-96 h-96 bg-[#00f5d4]/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-
     <div class="fixed bottom-1/3 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
 
@@ -64,7 +63,7 @@
          NAVBAR
     ========================== -->
 
-    <nav class="fixed top-0 left-0 w-full z-50 bg-[#060913]/80 backdrop-blur-md border-b border-slate-800/80">
+    <nav class="fixed top-0 left-0 w-full z-40 bg-[#060913]/80 backdrop-blur-md border-b border-slate-800/80">
 
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
@@ -78,47 +77,12 @@
 
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
 
-                <a
-                    href="#about"
-                    class="hover:text-[#00f5d4] transition-colors duration-200"
-                >
-                    About
-                </a>
-
-                <a
-                    href="#solutions"
-                    class="hover:text-[#00f5d4] transition-colors duration-200"
-                >
-                    Solutions
-                </a>
-
-                <a
-                    href="#featured"
-                    class="hover:text-[#00f5d4] transition-colors duration-200"
-                >
-                    Projects
-                </a>
-
-                <a
-                    href="#resume"
-                    class="hover:text-[#00f5d4] transition-colors duration-200"
-                >
-                    Resume
-                </a>
-
-                <a
-                    href="#skills"
-                    class="hover:text-[#00f5d4] transition-colors duration-200"
-                >
-                    Skills & Social
-                </a>
-
-                <a
-                    href="#contact"
-                    class="hover:text-[#00f5d4] transition-colors duration-200"
-                >
-                    Contact
-                </a>
+                <a href="#about" class="hover:text-[#00f5d4] transition-colors duration-200">About</a>
+                <a href="#solutions" class="hover:text-[#00f5d4] transition-colors duration-200">Solutions</a>
+                <a href="#featured" class="hover:text-[#00f5d4] transition-colors duration-200">Projects</a>
+                <a href="javascript:void(0)" onclick="openResumeModal()" class="hover:text-[#00f5d4] transition-colors duration-200">Resume</a>
+                <a href="#skills" class="hover:text-[#00f5d4] transition-colors duration-200">Skills & Social</a>
+                <a href="#contact" class="hover:text-[#00f5d4] transition-colors duration-200">Contact</a>
 
             </div>
 
@@ -172,7 +136,7 @@
 
                 <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#00f5d4]/10 text-[#00f5d4] border border-[#00f5d4]/20 tracking-wide">
 
-                    ⚡ Python Backend Developer | Backend & DevOps Engineer
+                    ⚡ Python Backend, DevOps & AI Engineer
 
                 </span>
 
@@ -192,23 +156,23 @@
                 <div class="flex flex-wrap gap-2 justify-center md:justify-start pt-1">
 
                     <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-300 border border-slate-800">
-                        Django & DRF
-                    </span>
-
-                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-300 border border-slate-800">
                         FastAPI
                     </span>
 
                     <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-300 border border-slate-800">
-                        PostgreSQL
+                        Django & DRF
+                    </span>
+
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-[#00f5d4] border border-[#00f5d4]/30">
+                        LLM & RAG Pipelines
                     </span>
 
                     <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-300 border border-slate-800">
-                        Docker
+                        PostgreSQL & SQLAlchemy
                     </span>
 
                     <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-300 border border-slate-800">
-                        AI Integration
+                        Docker & Nginx
                     </span>
 
                     <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-[#00f5d4] border border-[#00f5d4]/30">
@@ -220,23 +184,11 @@
                     </span>
 
                     <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-[#00f5d4] border border-[#00f5d4]/30">
-                        SQLAlchemy
+                        Vector Search & Embeddings
                     </span>
 
                     <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-[#00f5d4] border border-[#00f5d4]/30">
-                        Nginx
-                    </span>
-
-                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-[#00f5d4] border border-[#00f5d4]/30">
-                        Terraform
-                    </span>
-
-                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-[#00f5d4] border border-[#00f5d4]/30">
-                        CI/CD
-                    </span>
-
-                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-[#00f5d4] border border-[#00f5d4]/30">
-                        GitHub Actions
+                        Terraform & CI/CD
                     </span>
 
                 </div>
@@ -244,7 +196,7 @@
 
 
                 <p class="text-slate-300 text-xs">
-                    Django • FastAPI • PostgreSQL • Docker • Nginx • Terraform • CI/CD • AI Integration
+                    FastAPI • Django • LLM Integration • RAG • PostgreSQL • Docker • Nginx • CI/CD
                 </p>
 
 
@@ -255,11 +207,15 @@
 
                     <br>
 
-                    • Building high-speed RESTful APIs using Python, FastAPI, and Django.
+                    • Building high-performance RESTful APIs & AI Backends using Python, FastAPI, and Django.
 
                     <br>
 
-                    • Designing robust PostgreSQL database schemas and optimizing complex SQL queries.
+                    • Architecting LLM-powered tools, RAG systems with local vector search, and automated AI agents.
+
+                    <br>
+
+                    • Designing robust PostgreSQL database schemas, SQLAlchemy models, and query optimization.
 
                     <br>
 
@@ -267,11 +223,7 @@
 
                     <br>
 
-                    • Seamlessly integrating AI/LLM models and features into existing web products.
-
-                    <br>
-
-                    • Containerizing, deploying, and automating backend systems using Docker, Nginx, Terraform, and CI/CD.
+                    • Containerizing, deploying, and automating production backend systems using Docker, Nginx, Terraform, and GitHub Actions.
 
                 </p>
 
@@ -295,13 +247,12 @@
                         View Projects
                     </a>
 
-                    <a
-                        href="resume.pdf"
-                        download
+                    <button
+                        onclick="openResumeModal()"
                         class="border border-[#00f5d4]/40 bg-[#00f5d4]/10 px-6 py-3 rounded-xl font-semibold text-[#00f5d4] hover:bg-[#00f5d4] hover:text-slate-950 transition flex items-center gap-2"
                     >
-                        📄 Get Resume
-                    </a>
+                        📄 Preview Resume
+                    </button>
 
                 </div>
 
@@ -353,88 +304,88 @@
                                 1. Production-Ready Backend Systems:
                             </b>
 
-                            I build secure REST APIs and backend systems using Django REST Framework and FastAPI.
+                            I build secure REST APIs and scalable backend architectures using FastAPI and Django REST Framework.
 
                             <span class="text-[#00f5d4]">
                                 Client Benefit:
                             </span>
 
-                            You get a maintainable backend designed around real business workflows, not just basic CRUD.
+                            You get high-speed, maintainable backends tailored around real business logic and workflows.
                         </p>
 
 
                         <p>
                             <b class="text-slate-200">
-                                2. Secure Authentication & Access Control:
+                                2. AI Agent & LLM Workflows:
                             </b>
 
-                            I implement JWT authentication, RBAC, permissions, and secure password handling.
+                            I integrate Gemini AI, function/tool calling, RAG pipelines, and vector search directly into backend systems.
 
                             <span class="text-[#00f5d4]">
                                 Client Benefit:
                             </span>
 
-                            Users and business resources are protected with clearly defined access rules.
+                            Automate customer support, email parsing, document QA, and business intelligence with custom AI agents.
                         </p>
 
 
                         <p>
                             <b class="text-slate-200">
-                                3. Reliable Database & Background Processing:
+                                3. Secure Auth & Access Control:
                             </b>
 
-                            I design PostgreSQL schemas, optimize queries, and use Redis/Celery for caching and long-running background jobs.
+                            I implement robust JWT authentication, RBAC, API key permissions, and security protocols.
 
                             <span class="text-[#00f5d4]">
                                 Client Benefit:
                             </span>
 
-                            Heavy work can run outside the request cycle, keeping applications responsive as usage grows.
+                            Your sensitive data and software endpoints are safely protected with strict permission levels.
                         </p>
 
 
                         <p>
                             <b class="text-slate-200">
-                                4. Deployment & Infrastructure:
+                                4. Database & Async Background Tasks:
                             </b>
 
-                            I containerize applications with Docker and work with Nginx, Docker networking, persistent volumes, healthchecks, Linux/WSL, and Terraform.
+                            I design relational PostgreSQL schemas, ORMs (SQLAlchemy, Django ORM), and handle background tasks via Redis/Celery.
 
                             <span class="text-[#00f5d4]">
                                 Client Benefit:
                             </span>
 
-                            A consistent, production-oriented environment from development to deployment.
+                            Smooth user experience with responsive load times even during heavy operational workloads.
                         </p>
 
 
                         <p>
                             <b class="text-slate-200">
-                                5. CI/CD & Automated Delivery:
+                                5. Containerization & Infrastructure:
                             </b>
 
-                            I use GitHub Actions to automate testing, builds, and deployment workflows.
+                            I containerize backends with Docker Compose, configure Nginx reverse proxies, Linux/WSL, and IaC with Terraform.
 
                             <span class="text-[#00f5d4]">
                                 Client Benefit:
                             </span>
 
-                            Faster and more repeatable releases with fewer manual deployment steps.
+                            Consistent, reproducible environments ready for effortless cloud deployment and scaling.
                         </p>
 
 
                         <p>
                             <b class="text-slate-200">
-                                6. AI / LLM Integration:
+                                6. CI/CD & Automated Delivery:
                             </b>
 
-                            I integrate AI capabilities into backend workflows when they provide real product value.
+                            I write GitHub Actions pipelines to run automated tests, linting, Docker builds, and deployments.
 
                             <span class="text-[#00f5d4]">
                                 Client Benefit:
                             </span>
 
-                            Your existing application can gain intelligent automation, search, or assistant-style features.
+                            Faster iteration cycles and zero-downtime updates with high software reliability.
                         </p>
 
                     </div>
@@ -457,10 +408,21 @@
                         <div class="glass-card p-4 rounded-xl">
 
                             <b class="text-slate-200 block mb-1">
-                                Complete Backend Thinking
+                                End-to-End Execution
                             </b>
 
-                            API, business logic, database, authentication, background jobs, and deployment.
+                            API Design, Databases, AI Capabilities, Dockerization, and DevOps setup.
+
+                        </div>
+
+
+                        <div class="glass-card p-4 rounded-xl">
+
+                            <b class="text-slate-200 block mb-1">
+                                AI & LLM Native
+                            </b>
+
+                            Expertise in tool calling, function execution, RAG, and AI workflow integration.
 
                         </div>
 
@@ -471,7 +433,7 @@
                                 Production Mindset
                             </b>
 
-                            Docker, Nginx, healthchecks, networking, persistent storage, Linux, and infrastructure automation.
+                            Healthchecks, container networking, Nginx, logging, security, and scalability.
 
                         </div>
 
@@ -479,21 +441,10 @@
                         <div class="glass-card p-4 rounded-xl">
 
                             <b class="text-slate-200 block mb-1">
-                                Testable & Maintainable
+                                Business-Focused
                             </b>
 
-                            Clean backend structure, automated testing, API documentation, and repeatable workflows.
-
-                        </div>
-
-
-                        <div class="glass-card p-4 rounded-xl">
-
-                            <b class="text-slate-200 block mb-1">
-                                Business-First Delivery
-                            </b>
-
-                            I focus on real workflows such as billing, payments, orders, multi-tenancy, SLA, and role-based systems.
+                            Solving real problem statements like automated ticketing, document QA, billing, and SLA.
 
                         </div>
 
@@ -508,15 +459,15 @@
                     <div class="flex flex-wrap gap-2 text-[11px]">
 
                         <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
-                            ✓ Scalable REST APIs
+                            ✓ FastAPI & Django REST
                         </span>
 
                         <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
-                            ✓ Secure Auth & RBAC
+                            ✓ LLM & RAG Integration
                         </span>
 
                         <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
-                            ✓ PostgreSQL
+                            ✓ PostgreSQL & SQLAlchemy
                         </span>
 
                         <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
@@ -524,11 +475,7 @@
                         </span>
 
                         <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
-                            ✓ Dockerized Deployment
-                        </span>
-
-                        <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
-                            ✓ Nginx
+                            ✓ Docker & Nginx
                         </span>
 
                         <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
@@ -540,11 +487,7 @@
                         </span>
 
                         <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
-                            ✓ Swagger / OpenAPI
-                        </span>
-
-                        <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
-                            ✓ AI / LLM Integration
+                            ✓ Swagger / OpenAPI Docs
                         </span>
 
                     </div>
@@ -564,58 +507,33 @@
                     <ul class="space-y-3 text-xs text-slate-300">
 
                         <li class="flex justify-between">
-                            <span class="text-slate-500">
-                                Role:
-                            </span>
-                            <span>
-                                Backend & DevOps Engineer
-                            </span>
+                            <span class="text-slate-500">Role:</span>
+                            <span>Python Backend, DevOps & AI Engineer</span>
                         </li>
 
                         <li class="flex justify-between">
-                            <span class="text-slate-500">
-                                Focus:
-                            </span>
-                            <span>
-                                APIs, Databases & AI
-                            </span>
+                            <span class="text-slate-500">Core Stack:</span>
+                            <span>FastAPI, Django, Gemini, RAG</span>
                         </li>
 
                         <li class="flex justify-between">
-                            <span class="text-slate-500">
-                                Database:
-                            </span>
-                            <span>
-                                PostgreSQL
-                            </span>
+                            <span class="text-slate-500">Database:</span>
+                            <span>PostgreSQL, SQLAlchemy, VectorDB</span>
                         </li>
 
                         <li class="flex justify-between">
-                            <span class="text-slate-500">
-                                Infrastructure:
-                            </span>
-                            <span>
-                                Docker, Nginx, Terraform
-                            </span>
+                            <span class="text-slate-500">Infrastructure:</span>
+                            <span>Docker, Nginx, Terraform</span>
                         </li>
 
                         <li class="flex justify-between">
-                            <span class="text-slate-500">
-                                Automation:
-                            </span>
-                            <span>
-                                GitHub Actions / CI/CD
-                            </span>
+                            <span class="text-slate-500">Automation:</span>
+                            <span>GitHub Actions / CI/CD</span>
                         </li>
 
                         <li class="flex justify-between">
-                            <span class="text-slate-500">
-                                Availability:
-                            </span>
-
-                            <span class="text-[#00f5d4] font-semibold">
-                                Open to Work / Freelance
-                            </span>
+                            <span class="text-slate-500">Availability:</span>
+                            <span class="text-[#00f5d4] font-semibold">Open to Work / Freelance</span>
                         </li>
 
                     </ul>
@@ -653,7 +571,7 @@
 
 
             <p class="text-slate-400 mb-12 text-sm">
-                How I help client applications perform better, stay secure, and scale effortlessly:
+                How I help client applications perform better, stay secure, leverage AI, and scale effortlessly:
             </p>
 
 
@@ -665,20 +583,18 @@
 
                 <div class="glass-card p-6 rounded-2xl transition-all duration-300">
 
-                    <div class="text-[#00f5d4] text-3xl font-black mb-3">
-                        01
-                    </div>
+                    <div class="text-[#00f5d4] text-3xl font-black mb-3">01</div>
 
                     <h3 class="text-lg font-bold mb-2 text-slate-200">
-                        High-Performance APIs
+                        High-Performance Backends
                     </h3>
 
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Eliminate slow system responses by engineering high-speed asynchronous REST APIs using FastAPI and Django.
+                        Eliminate slow system responses by engineering high-speed asynchronous RESTful APIs using FastAPI and Django REST Framework.
                     </p>
 
                     <span class="inline-block text-[#00f5d4] text-[11px] font-semibold bg-[#00f5d4]/10 px-3 py-1.5 rounded-lg border border-[#00f5d4]/20">
-                        ⚡ Efficient API Architecture
+                        ⚡ Async API Architecture
                     </span>
 
                 </div>
@@ -689,20 +605,18 @@
 
                 <div class="glass-card p-6 rounded-2xl transition-all duration-300">
 
-                    <div class="text-[#00f5d4] text-3xl font-black mb-3">
-                        02
-                    </div>
+                    <div class="text-[#00f5d4] text-3xl font-black mb-3">02</div>
 
                     <h3 class="text-lg font-bold mb-2 text-slate-200">
-                        Security & Authentication
+                        AI Agents & RAG Integration
                     </h3>
 
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Protect application data using JWT authentication, role-based access control, permissions, and secure password handling.
+                        Empower applications with LLM function calling, document context retrieval (RAG), and smart automated agents.
                     </p>
 
                     <span class="inline-block text-[#00f5d4] text-[11px] font-semibold bg-[#00f5d4]/10 px-3 py-1.5 rounded-lg border border-[#00f5d4]/20">
-                        🛡️ Secure Access Control
+                        🧠 Autonomous AI Workflows
                     </span>
 
                 </div>
@@ -713,16 +627,14 @@
 
                 <div class="glass-card p-6 rounded-2xl transition-all duration-300">
 
-                    <div class="text-[#00f5d4] text-3xl font-black mb-3">
-                        03
-                    </div>
+                    <div class="text-[#00f5d4] text-3xl font-black mb-3">03</div>
 
                     <h3 class="text-lg font-bold mb-2 text-slate-200">
                         Database Optimization
                     </h3>
 
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Reduce unnecessary database overhead through PostgreSQL schema design, query optimization, indexing, and Redis caching.
+                        Reduce database latency through PostgreSQL schema design, query optimization, SQLAlchemy, indexing, and Redis caching.
                     </p>
 
                     <span class="inline-block text-[#00f5d4] text-[11px] font-semibold bg-[#00f5d4]/10 px-3 py-1.5 rounded-lg border border-[#00f5d4]/20">
@@ -737,16 +649,14 @@
 
                 <div class="glass-card p-6 rounded-2xl transition-all duration-300">
 
-                    <div class="text-[#00f5d4] text-3xl font-black mb-3">
-                        04
-                    </div>
+                    <div class="text-[#00f5d4] text-3xl font-black mb-3">04</div>
 
                     <h3 class="text-lg font-bold mb-2 text-slate-200">
                         Async Task Processing
                     </h3>
 
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Handle emails, reports, notifications, and other long-running operations in the background using Celery and Redis.
+                        Handle emails, parsing, reports, and long-running operations seamlessly in the background using Celery and Redis.
                     </p>
 
                     <span class="inline-block text-[#00f5d4] text-[11px] font-semibold bg-[#00f5d4]/10 px-3 py-1.5 rounded-lg border border-[#00f5d4]/20">
@@ -761,16 +671,14 @@
 
                 <div class="glass-card p-6 rounded-2xl transition-all duration-300">
 
-                    <div class="text-[#00f5d4] text-3xl font-black mb-3">
-                        05
-                    </div>
+                    <div class="text-[#00f5d4] text-3xl font-black mb-3">05</div>
 
                     <h3 class="text-lg font-bold mb-2 text-slate-200">
-                        Deployment & Infrastructure
+                        Docker & Infrastructure
                     </h3>
 
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Containerize applications and build production-oriented environments using Docker, Nginx, Docker networking, volumes, healthchecks, Linux/WSL, and Terraform.
+                        Containerize apps with Docker, setting up Nginx reverse proxies, environment configs, healthchecks, and Terraform IaC.
                     </p>
 
                     <span class="inline-block text-[#00f5d4] text-[11px] font-semibold bg-[#00f5d4]/10 px-3 py-1.5 rounded-lg border border-[#00f5d4]/20">
@@ -785,44 +693,18 @@
 
                 <div class="glass-card p-6 rounded-2xl transition-all duration-300">
 
-                    <div class="text-[#00f5d4] text-3xl font-black mb-3">
-                        06
-                    </div>
+                    <div class="text-[#00f5d4] text-3xl font-black mb-3">06</div>
 
                     <h3 class="text-lg font-bold mb-2 text-slate-200">
                         CI/CD Automation
                     </h3>
 
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Automate testing, Docker builds, and deployment workflows using GitHub Actions and CI/CD pipelines.
+                        Automate testing, container builds, and deployment pipelines effortlessly using GitHub Actions CI/CD workflows.
                     </p>
 
                     <span class="inline-block text-[#00f5d4] text-[11px] font-semibold bg-[#00f5d4]/10 px-3 py-1.5 rounded-lg border border-[#00f5d4]/20">
                         🔁 Automated Delivery
-                    </span>
-
-                </div>
-
-
-
-                <!-- 07 -->
-
-                <div class="glass-card p-6 rounded-2xl transition-all duration-300 md:col-span-3">
-
-                    <div class="text-[#00f5d4] text-3xl font-black mb-3">
-                        07
-                    </div>
-
-                    <h3 class="text-lg font-bold mb-2 text-slate-200">
-                        AI & LLM Integration
-                    </h3>
-
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Integrate intelligent Large Language Models, AI assistants, smart search, and AI-powered backend workflows into existing applications.
-                    </p>
-
-                    <span class="inline-block text-[#00f5d4] text-[11px] font-semibold bg-[#00f5d4]/10 px-3 py-1.5 rounded-lg border border-[#00f5d4]/20">
-                        🧠 Intelligent Product Features
                     </span>
 
                 </div>
@@ -861,9 +743,8 @@
             <div class="grid md:grid-cols-2 gap-8">
 
 
-
                 <!-- =====================================================
-                     PROJECT 1 — SUPPORTFLOW
+                     PROJECT 1 — AI CUSTOMER SUPPORT AGENT
                 ====================================================== -->
 
                 <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
@@ -872,10 +753,290 @@
 
                         <div class="flex justify-between items-center mb-4">
 
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#00f5d4]/10 text-[#00f5d4] border border-[#00f5d4]/20">
+                                AI & FastAPI Agent
+                            </span>
+
+                            <span class="text-xs text-[#00f5d4] font-medium">
+                                Active Project
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">
+                            AI Customer Support Agent
+                        </h3>
+
+
+                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                            AI-powered customer support agent built with FastAPI, PostgreSQL, SQLAlchemy, and LLM tool calling for automated customer, payment, invoice, and ticket management.
+                        </p>
+
+
+                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">🤖 AI Engine:</span> LLM Tool Calling & Automated Function Execution
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">⚙️ Backend:</span> FastAPI, SQLAlchemy & PostgreSQL
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">💼 Capabilities:</span> Payment, Invoice, Customer & Support Ticket Management
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">SQLAlchemy</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">LLM Tool Calling</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Python</span>
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/Almas-Web/ai-customer-support-agent.git"
+                        target="_blank"
+                        class="text-xs text-center border border-slate-700 hover:border-[#00f5d4] py-2.5 rounded-lg font-semibold text-slate-300 hover:text-[#00f5d4] transition block"
+                    >
+                        View Repository on GitHub ↗
+                    </a>
+
+                </div>
+
+
+
+                <!-- =====================================================
+                     PROJECT 2 — AI SUPPORT ASSISTANT
+                ====================================================== -->
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+
+                    <div>
+
+                        <div class="flex justify-between items-center mb-4">
+
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                Billing & AI Assistant
+                            </span>
+
+                            <span class="text-xs text-cyan-400 font-medium">
+                                Active Project
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">
+                            AI Support Assistant
+                        </h3>
+
+
+                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                            AI-powered customer support and billing assistant built with FastAPI, PostgreSQL, SQLAlchemy, and LLM function calling for instant customer resolution.
+                        </p>
+
+
+                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">💡 Logic:</span> LLM Function Calling & Context Parsing
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">💳 Core Features:</span> Billing Assistance & Automated Customer Queries
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">🗄️ Database:</span> PostgreSQL with Async ORM Architecture
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">SQLAlchemy</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Function Calling</span>
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/Almas-Web/ai-support-assistant.git"
+                        target="_blank"
+                        class="text-xs text-center border border-slate-700 hover:border-[#00f5d4] py-2.5 rounded-lg font-semibold text-slate-300 hover:text-[#00f5d4] transition block"
+                    >
+                        View Repository on GitHub ↗
+                    </a>
+
+                </div>
+
+
+
+                <!-- =====================================================
+                     PROJECT 3 — AI DOCUMENT QA API
+                ====================================================== -->
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+
+                    <div>
+
+                        <div class="flex justify-between items-center mb-4">
+
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                RAG & Vector Search
+                            </span>
+
+                            <span class="text-xs text-purple-400 font-medium">
+                                Active Project
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">
+                            AI Document Q&A API
+                        </h3>
+
+
+                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                            RAG-based Document Q&A API built with FastAPI, local embeddings, vector search, and LLMs for real-time document search and intelligent answers.
+                        </p>
+
+
+                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">🔍 Engine:</span> RAG Architecture & Vector Indexing
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">🧠 Embeddings:</span> Local Embeddings for High-Speed Retrieval
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">📄 Service:</span> Contextual Document Question Answering API
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">RAG</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Local Embeddings</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Vector Search</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">LLM</span>
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/Almas-Web/ai-document-qa-api.git"
+                        target="_blank"
+                        class="text-xs text-center border border-slate-700 hover:border-[#00f5d4] py-2.5 rounded-lg font-semibold text-slate-300 hover:text-[#00f5d4] transition block"
+                    >
+                        View Repository on GitHub ↗
+                    </a>
+
+                </div>
+
+
+
+                <!-- =====================================================
+                     PROJECT 4 — AI EMAIL ANALYZER API
+                ====================================================== -->
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+
+                    <div>
+
+                        <div class="flex justify-between items-center mb-4">
+
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                                Gemini AI Backend
+                            </span>
+
+                            <span class="text-xs text-amber-400 font-medium">
+                                Active Project
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">
+                            AI Email Analyzer API
+                        </h3>
+
+
+                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                            Production-grade FastAPI backend powered by Google Gemini AI for advanced email parsing, structured intelligence, and LLM-driven workflows.
+                        </p>
+
+
+                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">✨ Powered By:</span> Google Gemini AI Model Integration
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">📩 Automation:</span> Advanced Email Parsing & Intelligence Extraction
+                            </div>
+
+                            <div>
+                                <span class="text-[#00f5d4] font-semibold">⚙️ Quality:</span> Production-Grade FastAPI Backend & Structure
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Google Gemini AI</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Email Parsing</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">LLM Workflows</span>
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/Almas-Web/ai-email-analyzer-api.git"
+                        target="_blank"
+                        class="text-xs text-center border border-slate-700 hover:border-[#00f5d4] py-2.5 rounded-lg font-semibold text-slate-300 hover:text-[#00f5d4] transition block"
+                    >
+                        View Repository on GitHub ↗
+                    </a>
+
+                </div>
+
+
+
+                <!-- =====================================================
+                     PROJECT 5 — SUPPORTFLOW
+                ====================================================== -->
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between md:col-span-2">
+
+                    <div>
+
+                        <div class="flex justify-between items-center mb-4">
+
                             <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-
                                 Multi-Tenant Support & SLA API
-
                             </span>
 
                             <span class="text-xs text-emerald-400 font-medium">
@@ -886,626 +1047,48 @@
 
 
                         <h3 class="text-xl font-bold mb-2 text-slate-100">
-
                             SupportFlow — Multi-Tenant Customer Support & SLA Platform
-
                         </h3>
 
 
                         <p class="text-slate-400 text-xs mb-5 leading-relaxed">
-
                             A production-oriented multi-tenant customer support and SLA management backend built with Django REST Framework, PostgreSQL, Docker, Nginx, and Terraform.
-
                         </p>
 
 
-                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
+                        <div class="grid md:grid-cols-4 gap-3 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
 
                             <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    🏢 Architecture:
-                                </span>
-
+                                <span class="text-[#00f5d4] font-semibold block mb-1">🏢 Architecture:</span>
                                 Multi-Tenant Organization & RBAC
-
                             </div>
 
-
                             <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    ⚙️ DevOps:
-                                </span>
-
-                                Docker Compose, Networking, Volumes, Healthchecks, Nginx Reverse Proxy & Terraform
-
+                                <span class="text-[#00f5d4] font-semibold block mb-1">⚙️ DevOps:</span>
+                                Docker Compose, Healthchecks & Terraform
                             </div>
 
-
                             <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    🐧 Environment:
-                                </span>
-
-                                Linux / WSL
-
+                                <span class="text-[#00f5d4] font-semibold block mb-1">🐧 Environment:</span>
+                                Linux / WSL / Nginx Reverse Proxy
                             </div>
 
-
                             <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    🔄 Automation:
-                                </span>
-
-                                GitHub Actions & CI/CD
-
+                                <span class="text-[#00f5d4] font-semibold block mb-1">🔄 Automation:</span>
+                                GitHub Actions & CI/CD Pipelines
                             </div>
 
                         </div>
 
 
                         <div class="flex flex-wrap gap-1.5 mb-6">
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Django DRF
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                PostgreSQL
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Docker
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Nginx
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Terraform
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                GitHub Actions
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                CI/CD
-                            </span>
-
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Django DRF</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Docker</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Nginx</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Terraform</span>
+                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">CI/CD</span>
                         </div>
-
-                    </div>
-
-
-
-                    <div class="pt-4 border-t border-slate-800/80 flex justify-between items-center text-xs font-semibold">
-
-                        <!-- No localhost public link -->
-
-                        <span class="text-slate-500">
-                            Local Swagger / API Docs
-                        </span>
-
-
-                        <a
-                            href="https://github.com/Almas-Web/supportflow.git"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-[#00f5d4] hover:underline"
-                        >
-                            📂 GitHub Repo →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================================
-                     PROJECT 2 — SAAS BILLING
-                ====================================================== -->
-
-                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-
-                    <div>
-
-                        <div class="flex justify-between items-center mb-4">
-
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-
-                                SaaS Billing & Subscriptions
-
-                            </span>
-
-                            <span class="text-xs text-emerald-400 font-medium">
-                                Production Deployed
-                            </span>
-
-                        </div>
-
-
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">
-
-                            SaaS Billing & Subscription REST API
-
-                        </h3>
-
-
-                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
-
-                            A production-ready SaaS Billing & Subscription REST API featuring subscription plans, customer subscriptions, projects, payment processing foundation, invoice generation, PDF downloads, usage tracking, and CI/CD.
-
-                        </p>
-
-
-                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    💳 Payment Flow:
-                                </span>
-
-                                Stripe Payment Foundation, Payments & Invoicing
-
-                            </div>
-
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    📄 Billing:
-                                </span>
-
-                                Invoice Generation & PDF Downloads
-
-                            </div>
-
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    📊 Usage:
-                                </span>
-
-                                Usage Tracking
-
-                            </div>
-
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    🚀 Deployment:
-                                </span>
-
-                                Render Production, Docker & GitHub Actions CI/CD
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Django DRF
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                PostgreSQL
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Stripe Foundation
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Docker
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                CI/CD
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="pt-4 border-t border-slate-800/80 flex justify-between items-center text-xs font-semibold">
-
-                        <a
-                            href="https://saas-billing-api-9p36.onrender.com/api/docs/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-[#00f5d4] hover:underline"
-                        >
-                            ⚡ Live Swagger API →
-                        </a>
-
-
-                        <a
-                            href="https://github.com/Almas-Web/saas-billing-api.git"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-slate-400 hover:text-[#00f5d4]"
-                        >
-                            📂 GitHub Repo →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================================
-                     PROJECT 3 — COMMERCEHUB
-                ====================================================== -->
-
-                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-
-                    <div>
-
-                        <div class="flex justify-between items-center mb-4">
-
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                                Django Production API
-                            </span>
-
-                            <span class="text-xs text-emerald-400 font-medium">
-                                187 Tests / 97% Coverage
-                            </span>
-
-                        </div>
-
-
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">
-                            CommerceHub — E-Commerce API
-                        </h3>
-
-
-                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
-
-                            A production-ready e-commerce backend supporting multi-role permissions for Customer, Seller, and Admin with cart, wishlist, orders, payments, reviews, and automated testing.
-
-                        </p>
-
-
-                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    🔄 Business Flow:
-                                </span>
-
-                                Register → Cart → Order → Payment → Reviews
-
-                            </div>
-
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    🔐 Security:
-                                </span>
-
-                                JWT Authentication & Role-Based Permissions
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Django DRF
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                PostgreSQL
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Redis
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Celery
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Pytest
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="pt-4 border-t border-slate-800/80 flex justify-between items-center text-xs font-semibold">
-
-                        <a
-                            href="https://commercehub-api-hst9.onrender.com/api/docs/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-[#00f5d4] hover:underline"
-                        >
-                            ⚡ Live API →
-                        </a>
-
-
-                        <a
-                            href="https://github.com/Almas-Web/CommerceHub.git"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-slate-400 hover:text-[#00f5d4]"
-                        >
-                            📂 GitHub Repo →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================================
-                     PROJECT 4 — BLOG
-                ====================================================== -->
-
-                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-
-                    <div>
-
-                        <div class="flex justify-between items-center mb-4">
-
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                                Production Backend
-                            </span>
-
-                            <span class="text-xs text-slate-400">
-                                Render Deployed
-                            </span>
-
-                        </div>
-
-
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">
-                            Blog Management REST API
-                        </h3>
-
-
-                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
-
-                            A production backend built with Django REST Framework, Docker, PostgreSQL, and CI/CD. Features JWT authentication, email verification, password recovery, rate limiting, and content management.
-
-                        </p>
-
-
-                        <div class="space-y-2 mb-6 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 text-xs text-slate-300">
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    🔐 Auth:
-                                </span>
-
-                                JWT Tokens, Email Verification & Password Recovery
-
-                            </div>
-
-
-                            <div>
-
-                                <span class="text-[#00f5d4] font-semibold">
-                                    ⚙️ Deployment:
-                                </span>
-
-                                Docker, Gunicorn, PostgreSQL & GitHub Actions
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Django DRF
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                PostgreSQL
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Docker
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                CI/CD
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="pt-4 border-t border-slate-800/80 flex justify-between items-center text-xs font-semibold">
-
-                        <a
-                            href="https://lnkd.in/gpaWHD4A"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-[#00f5d4] hover:underline"
-                        >
-                            ⚡ Live API & Swagger →
-                        </a>
-
-
-                        <a
-                            href="https://github.com/Almas-Web/django-blog-management-system.git"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-slate-400 hover:text-[#00f5d4]"
-                        >
-                            📂 GitHub Repo →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================================
-                     PROJECT 5 — TEAMFLOW
-                ====================================================== -->
-
-                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-
-                    <div>
-
-                        <div class="flex justify-between items-center mb-4">
-
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                                FastAPI Architecture
-                            </span>
-
-                        </div>
-
-
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">
-                            TeamFlow API — Project & Team Collaboration
-                        </h3>
-
-
-                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
-
-                            A FastAPI backend for project management and team collaboration with workspace/task management, Redis caching, background workers, and monitoring architecture.
-
-                        </p>
-
-
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                FastAPI
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                SQLAlchemy
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                PostgreSQL
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                Docker
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="pt-4 border-t border-slate-800/80 flex justify-between items-center text-xs font-semibold">
-
-                        <span class="text-slate-400">
-                            Production Ready
-                        </span>
-
-
-                        <a
-                            href="https://github.com/Almas-Web/teamflow-api"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-[#00f5d4] hover:underline"
-                        >
-                            📂 GitHub Repo →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================================
-                     PROJECT 6 — MULTI VENDOR
-                ====================================================== -->
-
-                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-
-                    <div>
-
-                        <div class="flex justify-between items-center mb-4">
-
-                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                                Multi-Vendor FastAPI
-                            </span>
-
-                        </div>
-
-
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">
-                            Multi-Vendor E-Commerce REST API
-                        </h3>
-
-
-                        <p class="text-slate-400 text-xs mb-5 leading-relaxed">
-
-                            A multi-vendor marketplace REST API designed with FastAPI. Supports Admin, Vendor, and Customer roles with product CRUD, cart handling, address management, and access control.
-
-                        </p>
-
-
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                FastAPI
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                SQLAlchemy
-                            </span>
-
-                            <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">
-                                PostgreSQL
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="pt-4 border-t border-slate-800/80 flex justify-between items-center text-xs font-semibold">
-
-                        <span class="text-slate-400">
-                            Swagger / OpenAPI Included
-                        </span>
-
-
-                        <a
-                            href="https://github.com/Almas-Web/multi-vendor-ecommerce-api"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-[#00f5d4] hover:underline"
-                        >
-                            📂 GitHub Repo →
-                        </a>
 
                     </div>
 
@@ -1520,95 +1103,50 @@
 
 
     <!-- =========================
-         RESUME
+         RESUME SECTION
     ========================== -->
 
-    <section 
-    id="resume" 
-    class="py-20 border-t border-slate-800/60"
-> 
+    <section id="resume" class="py-20 border-t border-slate-800/60">
 
-    <div class="max-w-4xl mx-auto px-6 text-center"> 
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
 
-        <div class="inline-flex items-center gap-3 mb-4"> 
-
-            <h2 class="text-3xl font-extrabold text-slate-100"> 
-                Resume
+            <h2 class="text-3xl font-extrabold text-slate-100">
+                Curriculum Vitae / Resume
             </h2>
 
-        </div>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">
+                Looking for a dedicated Python Backend, DevOps & AI Engineer? Preview my complete CV online without downloading.
+            </p>
 
+            <div class="pt-4 flex justify-center gap-4">
 
-        <p class="text-slate-400 mb-8 text-sm max-w-xl mx-auto"> 
-            Interested in my complete career history, technical skill breakdown, and academic credentials? Download my official resume below.
-        </p>
-
-
-        <div class="glass-card p-8 rounded-3xl border border-[#00f5d4]/30 max-w-xl mx-auto flex flex-col items-center space-y-6"> 
-
-            <div class="w-16 h-16 rounded-2xl bg-[#00f5d4]/10 border border-[#00f5d4]/30 flex items-center justify-center text-3xl text-[#00f5d4]"> 
-                📄
-            </div>
-
-
-            <div> 
-
-                <h3 class="text-xl font-bold text-slate-100"> 
-                    Almas Hossen — Resume
-                </h3>
-
-                <p class="text-xs text-slate-400 mt-1"> 
-                    Python Backend Developer • Backend & DevOps Engineer
-                </p>
-
-            </div>
-
-
-            <div class="flex flex-wrap gap-4 justify-center w-full"> 
-
-                <a 
-                    href="Almas_Hossen_Python_Backend_AI_Developer_CV.pdf"
-                    download
-                    class="w-full sm:w-auto bg-[#00f5d4] text-slate-950 px-8 py-3.5 rounded-xl font-bold hover:bg-[#00f5d4]/90 transition shadow-lg shadow-[#00f5d4]/20 flex items-center justify-center gap-2"
-                > 
-                    📥 Download PDF Resume
-                </a>
-
-
-                <a 
-                    href="Almas_Hossen_Python_Backend_AI_Developer_CV.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="w-full sm:w-auto border border-slate-700 text-slate-300 px-6 py-3.5 rounded-xl font-semibold hover:border-[#00f5d4] hover:text-[#00f5d4] transition flex items-center justify-center"
-                > 
-                    👁️ Preview Online
-                </a>
+                <button
+                    onclick="openResumeModal()"
+                    class="bg-[#00f5d4] text-slate-950 px-8 py-3.5 rounded-xl font-bold hover:bg-[#00f5d4]/90 transition shadow-lg shadow-[#00f5d4]/20 flex items-center gap-2"
+                >
+                    👁️ Preview CV Online
+                </button>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
 
     <!-- =========================
-         SKILLS
+         SKILLS & SOCIAL
     ========================== -->
 
-    <section
-        id="skills"
-        class="py-20 border-t border-slate-800/60 bg-slate-950/40"
-    >
+    <section id="skills" class="py-20 border-t border-slate-800/60 bg-slate-950/40">
 
-        <div class="max-w-5xl mx-auto px-6 space-y-12">
+        <div class="max-w-5xl mx-auto px-6">
 
-
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 mb-10">
 
                 <h2 class="text-3xl font-extrabold text-slate-100">
-                    Skills & Social Links
+                    Skills & Connect
                 </h2>
 
                 <div class="h-[2px] w-24 gradient-border rounded-full"></div>
@@ -1616,246 +1154,88 @@
             </div>
 
 
+            <div class="grid md:grid-cols-2 gap-8">
 
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <!-- SKILLS -->
 
+                <div class="glass-card p-6 rounded-2xl space-y-4">
 
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Python
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Core Language
-                    </span>
+                    <h3 class="text-lg font-bold text-slate-100 border-b border-slate-800 pb-3">
+                        Technical Stack
+                    </h3>
+
+                    <div class="space-y-3 text-xs">
+
+                        <div>
+                            <span class="text-slate-400 block mb-1">Backend Frameworks:</span>
+                            <span class="text-slate-200 font-medium">FastAPI, Django, Django REST Framework</span>
+                        </div>
+
+                        <div>
+                            <span class="text-slate-400 block mb-1">AI & LLM Stack:</span>
+                            <span class="text-[#00f5d4] font-medium">Google Gemini, RAG Architecture, Local Embeddings, Vector Search, LLM Function/Tool Calling</span>
+                        </div>
+
+                        <div>
+                            <span class="text-slate-400 block mb-1">Databases & ORM:</span>
+                            <span class="text-slate-200 font-medium">PostgreSQL, SQLAlchemy, Django ORM, Redis</span>
+                        </div>
+
+                        <div>
+                            <span class="text-slate-400 block mb-1">DevOps & Infrastructure:</span>
+                            <span class="text-slate-200 font-medium">Docker, Docker Compose, Nginx, Terraform, Linux/WSL</span>
+                        </div>
+
+                        <div>
+                            <span class="text-slate-400 block mb-1">CI/CD & Automation:</span>
+                            <span class="text-slate-200 font-medium">GitHub Actions, Automated Testing, Celery Background Workers</span>
+                        </div>
+
+                    </div>
+
                 </div>
 
 
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Django / DRF
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Web Framework
-                    </span>
+
+                <!-- SOCIAL & LINKS -->
+
+                <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
+
+                    <div>
+
+                        <h3 class="text-lg font-bold text-slate-100 border-b border-slate-800 pb-3 mb-4">
+                            Connect With Me
+                        </h3>
+
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            Feel free to inspect my GitHub repositories, contact me directly via email, or preview my official resume online.
+                        </p>
+
+                    </div>
+
+
+                    <div class="space-y-3">
+
+                        <a
+                            href="https://github.com/Almas-Web"
+                            target="_blank"
+                            class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs hover:border-[#00f5d4] transition"
+                        >
+                            <span class="text-slate-200 font-medium">GitHub Profile</span>
+                            <span class="text-[#00f5d4]">@Almas-Web ↗</span>
+                        </a>
+
+                        <button
+                            onclick="openResumeModal()"
+                            class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs hover:border-[#00f5d4] transition"
+                        >
+                            <span class="text-slate-200 font-medium">Curriculum Vitae</span>
+                            <span class="text-[#00f5d4]">Preview CV 📄</span>
+                        </button>
+
+                    </div>
+
                 </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        FastAPI
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        API Framework
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        PostgreSQL
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Database
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Docker
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Containerization
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Docker Networking
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Container Networking
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Docker Volumes
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Persistent Storage
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Healthcheck
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Container Reliability
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Nginx
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Reverse Proxy
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Terraform
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Infrastructure as Code
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        GitHub Actions
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        CI Automation
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        CI/CD
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Delivery Automation
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Linux / WSL
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Linux Environment
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        Redis & Celery
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Async Workers
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        JWT & RBAC
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Authentication
-                    </span>
-                </div>
-
-
-                <div class="glass-card p-4 rounded-xl text-center">
-                    <span class="block text-slate-200 font-bold text-sm mb-1">
-                        AI / LLM Integration
-                    </span>
-                    <span class="text-[11px] text-slate-400">
-                        Smart Features
-                    </span>
-                </div>
-
-            </div>
-
-
-
-            <!-- SOCIAL LINKS -->
-
-            <div class="grid sm:grid-cols-2 gap-4">
-
-
-                <a
-                    href="https://github.com/Almas-Web"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="glass-card p-4 rounded-xl flex justify-between items-center hover:border-[#00f5d4] transition"
-                >
-
-                    <span class="text-sm font-bold text-slate-200">
-                        GitHub Profile
-                    </span>
-
-                    <span class="text-[#00f5d4] text-xs">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="https://www.linkedin.com/in/almas-hossen"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="glass-card p-4 rounded-xl flex justify-between items-center hover:border-blue-400 transition"
-                >
-
-                    <span class="text-sm font-bold text-slate-200">
-                        LinkedIn Profile
-                    </span>
-
-                    <span class="text-blue-400 text-xs">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="https://wa.me/8801331438063"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="glass-card p-4 rounded-xl flex justify-between items-center hover:border-emerald-400 transition"
-                >
-
-                    <span class="text-sm font-bold text-slate-200">
-                        WhatsApp
-                    </span>
-
-                    <span class="text-emerald-400 text-xs">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="mailto:almashossen028@gmail.com"
-                    class="glass-card p-4 rounded-xl flex justify-between items-center hover:border-pink-400 transition"
-                >
-
-                    <span class="text-sm font-bold text-slate-200">
-                        almashossen028@gmail.com
-                    </span>
-
-                    <span class="text-pink-400 text-xs">
-                        →
-                    </span>
-
-                </a>
 
             </div>
 
@@ -1869,108 +1249,28 @@
          CONTACT
     ========================== -->
 
-    <section
-        id="contact"
-        class="py-20 border-t border-slate-800/60"
-    >
+    <section id="contact" class="py-20 border-t border-slate-800/60">
 
-        <div class="max-w-3xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
 
-            <div class="flex items-center gap-3 mb-4">
+            <h2 class="text-3xl font-extrabold text-slate-100">
+                Get In Touch
+            </h2>
 
-                <h2 class="text-3xl font-extrabold text-slate-100">
-                    Send a Message
-                </h2>
-
-                <div class="h-[2px] w-24 gradient-border rounded-full"></div>
-
-            </div>
-
-
-            <p class="text-slate-400 mb-8 text-sm">
-
-                Have a project or opportunity?
-                Send me a message directly from here.
-
+            <p class="text-slate-400 text-sm max-w-lg mx-auto">
+                Have a project in mind, need an AI backend setup, or looking for a Python Backend & DevOps Engineer? Let's build something scalable together.
             </p>
 
+            <div class="pt-4">
 
-
-            <form
-                id="contact-form"
-                class="glass-card p-8 rounded-2xl space-y-5"
-            >
-
-
-                <div>
-
-                    <label class="block text-slate-300 text-sm font-medium mb-2">
-                        Your Name
-                    </label>
-
-                    <input
-                        type="text"
-                        name="user_name"
-                        placeholder="John Doe"
-                        required
-                        class="w-full px-4 py-3 bg-slate-950/80 border border-slate-800 rounded-xl text-slate-200 focus:outline-none focus:border-[#00f5d4] transition"
-                    >
-
-                </div>
-
-
-
-                <div>
-
-                    <label class="block text-slate-300 text-sm font-medium mb-2">
-                        Your Email
-                    </label>
-
-                    <input
-                        type="email"
-                        name="user_email"
-                        placeholder="john@example.com"
-                        required
-                        class="w-full px-4 py-3 bg-slate-950/80 border border-slate-800 rounded-xl text-slate-200 focus:outline-none focus:border-[#00f5d4] transition"
-                    >
-
-                </div>
-
-
-
-                <div>
-
-                    <label class="block text-slate-300 text-sm font-medium mb-2">
-                        Your Message
-                    </label>
-
-                    <textarea
-                        name="message"
-                        placeholder="Write your message here..."
-                        rows="5"
-                        required
-                        class="w-full px-4 py-3 bg-slate-950/80 border border-slate-800 rounded-xl text-slate-200 focus:outline-none focus:border-[#00f5d4] transition resize-none"
-                    ></textarea>
-
-                </div>
-
-
-
-                <button
-                    type="submit"
-                    id="submit-btn"
-                    class="w-full bg-[#00f5d4] text-slate-950 py-3.5 rounded-xl font-bold hover:bg-[#00f5d4]/90 transition shadow-lg shadow-[#00f5d4]/20"
+                <a
+                    href="mailto:almas@example.com"
+                    class="inline-block bg-[#00f5d4] text-slate-950 px-8 py-3.5 rounded-xl font-bold hover:bg-[#00f5d4]/90 transition shadow-lg shadow-[#00f5d4]/20"
                 >
-                    Send Message
-                </button>
+                    Send Email Message
+                </a>
 
-
-                <p
-                    id="form-status"
-                    class="hidden text-sm font-medium text-center mt-3"
-                ></p>
-
-            </form>
+            </div>
 
         </div>
 
@@ -1982,126 +1282,75 @@
          FOOTER
     ========================== -->
 
-    <footer class="py-8 border-t border-slate-800/80 text-center text-slate-500 text-sm">
+    <footer class="py-8 border-t border-slate-800/80 bg-slate-950 text-center text-xs text-slate-500">
 
-        <p>
-            &copy; 2026 Almas Hossen.
-            Built with Tailwind CSS & High-Performance Design.
-        </p>
+        <p>© 2026 Almas Hossen. Built for production-grade backend & AI performance.</p>
 
     </footer>
 
 
 
+    <!-- =========================================================
+         ONLINE CV/RESUME PREVIEW MODAL (Click to view without download)
+    ========================================================== -->
+
+    <div id="resumeModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+
+        <div class="bg-[#0f172a] border border-slate-700 w-full max-w-4xl h-[90vh] rounded-2xl flex flex-col overflow-hidden shadow-2xl">
+
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-800 flex justify-between items-center bg-slate-950">
+
+                <h3 class="text-slate-100 font-bold text-lg flex items-center gap-2">
+                    📄 Curriculum Vitae Preview
+                </h3>
+
+                <button
+                    onclick="closeResumeModal()"
+                    class="text-slate-400 hover:text-white text-xl font-bold p-1 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+            <!-- Modal Body / PDF Viewer -->
+            <div class="flex-1 w-full bg-slate-900">
+                <iframe
+                    src="resume.pdf"
+                    class="w-full h-full border-none"
+                    title="Almas Hossen CV Preview"
+                ></iframe>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
     <!-- =========================
-         EMAILJS
-    ========================== -->
-
-    <script
-        type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-
-
-    <script type="text/javascript">
-
-        (function() {
-
-            emailjs.init("w8QWEL3PV7zl4ePGq");
-
-        })();
-
-    </script>
-
-
-
-    <!-- =========================
-         CONTACT FORM SCRIPT
+         JAVASCRIPT LOGIC
     ========================== -->
 
     <script>
+        function openResumeModal() {
+            document.getElementById('resumeModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+        }
 
-        document
-            .getElementById('contact-form')
-            .addEventListener('submit', function(event) {
+        function closeResumeModal() {
+            document.getElementById('resumeModal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Enable background scrolling
+        }
 
-                event.preventDefault();
-
-
-                const btn =
-                    document.getElementById('submit-btn');
-
-                const status =
-                    document.getElementById('form-status');
-
-
-                btn.innerText = 'Sending...';
-
-
-                emailjs
-                    .sendForm(
-                        'service_uzsy639',
-                        'template_tb6j5nh',
-                        this
-                    )
-
-                    .then(function() {
-
-                        btn.innerText = 'Send Message';
-
-
-                        status.classList.remove(
-                            'hidden',
-                            'text-red-400'
-                        );
-
-
-                        status.classList.add(
-                            'text-emerald-400'
-                        );
-
-
-                        status.innerText =
-                            '✅ Message sent successfully! I will reply soon.';
-
-
-                        document
-                            .getElementById('contact-form')
-                            .reset();
-
-                    })
-
-                    .catch(function(error) {
-
-                        btn.innerText = 'Send Message';
-
-
-                        status.classList.remove(
-                            'hidden',
-                            'text-emerald-400'
-                        );
-
-
-                        status.classList.add(
-                            'text-red-400'
-                        );
-
-
-                        status.innerText =
-                            '❌ Failed to send message. Please try again.';
-
-
-                        console.error(
-                            'FAILED...',
-                            error
-                        );
-
-                    });
-
-            });
-
+        // Close modal when pressing ESC key
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeResumeModal();
+            }
+        });
     </script>
-
 
 </body>
 </html>
