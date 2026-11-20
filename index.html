@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>ALMAS HOSSEN — Full-Stack Web, AI & Backend Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -13,12 +13,17 @@
             --accent-rgb: 59, 130, 246;
         }
 
-        body {
+        html, body {
             background-color: var(--bg-main);
             color: #f3f4f6;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             overflow-x: hidden;
+            max-width: 100%;
             transition: background-color 0.6s ease;
+        }
+
+        section {
+            overflow-x: clip;
         }
 
         ::selection {
@@ -45,7 +50,7 @@
             border-color: var(--accent) !important;
         }
 
-        /* Custom Gol (Circular) Cursor */
+        /* Custom Gol (Circular) Cursor (Desktop only) */
         #custom-gol-cursor {
             position: fixed;
             top: 0;
@@ -80,16 +85,16 @@
             background-color: rgba(var(--accent-rgb), 0.12);
         }
 
-        @media (pointer: coarse) {
+        @media (pointer: coarse), (max-width: 768px) {
             #custom-gol-cursor {
-                display: none;
+                display: none !important;
             }
         }
 
         /* 1. Once on page open: photo drops from top and lands with a natural bounce */
         @keyframes photoEntranceDropOnce {
             0% {
-                transform: translate3d(0px, -210px, 0px) scale(0.96, 1.04);
+                transform: translate3d(0px, -140px, 0px) scale(0.96, 1.04);
                 opacity: 0.7;
             }
             42% {
@@ -97,7 +102,7 @@
                 opacity: 1;
             }
             64% {
-                transform: translate3d(0px, -28px, 0px) scale(0.98, 1.02);
+                transform: translate3d(0px, -22px, 0px) scale(0.98, 1.02);
             }
             82% {
                 transform: translate3d(0px, 0px, 0px) scale(1.02, 0.97);
@@ -114,13 +119,13 @@
                 transform: translate3d(0px, 0px, 0px) rotate(0deg);
             }
             25% {
-                transform: translate3d(6px, -14px, 0px) rotate(1deg);
+                transform: translate3d(4px, -10px, 0px) rotate(0.8deg);
             }
             50% {
-                transform: translate3d(-4px, -6px, 0px) rotate(-0.8deg);
+                transform: translate3d(-3px, -5px, 0px) rotate(-0.6deg);
             }
             75% {
-                transform: translate3d(-7px, -16px, 0px) rotate(0.7deg);
+                transform: translate3d(-5px, -12px, 0px) rotate(0.6deg);
             }
             100% {
                 transform: translate3d(0px, 0px, 0px) rotate(0deg);
@@ -133,13 +138,13 @@
                 transform: translateY(0px);
             }
             15% {
-                transform: translateY(-16px);
+                transform: translateY(-12px);
             }
             30% {
                 transform: translateY(0px);
             }
             42% {
-                transform: translateY(-8px);
+                transform: translateY(-6px);
             }
             55% {
                 transform: translateY(0px);
@@ -168,13 +173,13 @@
                 transform: translateY(0px);
             }
             18% {
-                transform: translateY(-10px);
+                transform: translateY(-8px);
             }
             34% {
                 transform: translateY(0px);
             }
             46% {
-                transform: translateY(-5px);
+                transform: translateY(-4px);
             }
             60% {
                 transform: translateY(0px);
@@ -197,7 +202,7 @@
                 transform: translateY(0px);
             }
             50% {
-                transform: translateY(-4px);
+                transform: translateY(-3px);
             }
         }
 
@@ -207,10 +212,10 @@
                 transform: translate3d(0px, 0px, 0px);
             }
             33% {
-                transform: translate3d(0px, -9px, 0px);
+                transform: translate3d(0px, -7px, 0px);
             }
             66% {
-                transform: translate3d(0px, -4px, 0px);
+                transform: translate3d(0px, -3px, 0px);
             }
         }
 
@@ -222,7 +227,7 @@
                 box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.28);
             }
             50% {
-                transform: translate3d(0px, -7px, 0px) scale(1.012);
+                transform: translate3d(0px, -6px, 0px) scale(1.01);
                 background-position: 100% 50%;
                 box-shadow: 0 12px 28px rgba(var(--accent-rgb), 0.36);
             }
@@ -239,17 +244,28 @@
                 transform: translate3d(0px, 0px, 0px);
             }
             50% {
-                transform: translate3d(0px, -6px, 0px);
+                transform: translate3d(0px, -5px, 0px);
             }
         }
 
         /* Project name moves left-to-right and right-to-left */
         @keyframes projectNameSwing {
             0%, 100% {
-                transform: translateX(-8px);
+                transform: translateX(-5px);
             }
             50% {
-                transform: translateX(12px);
+                transform: translateX(8px);
+            }
+        }
+
+        @media (min-width: 640px) {
+            @keyframes projectNameSwing {
+                0%, 100% {
+                    transform: translateX(-8px);
+                }
+                50% {
+                    transform: translateX(12px);
+                }
             }
         }
 
@@ -383,7 +399,7 @@
 
         .project-title-move {
             display: inline-block;
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             line-height: 1.3;
             font-weight: 900;
             letter-spacing: -0.01em;
@@ -393,6 +409,12 @@
             color: transparent;
             animation: projectNameSwing 3.2s ease-in-out infinite;
             will-change: transform;
+        }
+
+        @media (min-width: 640px) {
+            .project-title-move {
+                font-size: 1.25rem;
+            }
         }
 
         .project-card-anim:hover .project-title-move {
@@ -476,9 +498,9 @@
     <div id="footer-container"></div>
 
     <!-- CV MODAL -->
-    <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-[#0e0e12] w-full max-w-4xl h-[85vh] rounded-lg flex flex-col overflow-hidden" style="border: 1px solid rgba(var(--accent-rgb), 0.5);">
-            <div class="p-3.5 border-b border-white/10 flex items-center justify-between">
+    <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+        <div class="bg-[#0e0e12] w-full max-w-4xl h-[82vh] sm:h-[85vh] rounded-lg flex flex-col overflow-hidden" style="border: 1px solid rgba(var(--accent-rgb), 0.5);">
+            <div class="p-3 sm:p-3.5 border-b border-white/10 flex items-center justify-between">
                 <span class="text-xs font-bold uppercase tracking-wider text-white">Online CV Preview</span>
                 <button onclick="closeCvModal()" class="text-xs px-2.5 py-1 rounded bg-white/10 text-white accent-bg transition">✕</button>
             </div>
@@ -492,10 +514,10 @@
             emailjs.init("w8QWEL3PV7zl4ePGq");
         })();
 
-        /* 1. Custom Gol Cursor Logic */
+        /* 1. Custom Gol Cursor Logic (Pointer fine only) */
         (function initGolCursor() {
             const cursor = document.getElementById("custom-gol-cursor");
-            if (!cursor) return;
+            if (!cursor || !window.matchMedia("(pointer: fine)").matches) return;
 
             let mouseX = window.innerWidth / 2;
             let mouseY = window.innerHeight / 2;
@@ -532,12 +554,12 @@
         /* 2. Standard & Refined Auto Palette Every 5 Seconds */
         let currentPaletteIndex = 0;
         const colorPalette = [
-            { hex: "#3b82f6", rgb: "59, 130, 246",  grad: "linear-gradient(90deg, #f8fafc, #60a5fa, #a78bfa, #f8fafc)" },   // Sapphire Blue + Soft Violet
-            { hex: "#10b981", rgb: "16, 185, 129",  grad: "linear-gradient(90deg, #f8fafc, #34d399, #38bdf8, #f8fafc)" },   // Emerald Mint + Sky
-            { hex: "#8b5cf6", rgb: "139, 92, 246",  grad: "linear-gradient(90deg, #f8fafc, #a78bfa, #f472b6, #f8fafc)" },   // Royal Violet + Soft Rose
-            { hex: "#f43f5e", rgb: "244, 63, 94",   grad: "linear-gradient(90deg, #f8fafc, #fb7185, #fbbf24, #f8fafc)" },   // Rose Coral + Warm Gold
-            { hex: "#0ea5e9", rgb: "14, 165, 233",  grad: "linear-gradient(90deg, #f8fafc, #38bdf8, #818cf8, #f8fafc)" },   // Ocean Cyan + Indigo
-            { hex: "#eab308", rgb: "234, 179, 8",   grad: "linear-gradient(90deg, #f8fafc, #facc15, #fb7185, #f8fafc)" }    // Warm Gold + Rose
+            { hex: "#3b82f6", rgb: "59, 130, 246",  grad: "linear-gradient(90deg, #f8fafc, #60a5fa, #a78bfa, #f8fafc)" },
+            { hex: "#10b981", rgb: "16, 185, 129",  grad: "linear-gradient(90deg, #f8fafc, #34d399, #38bdf8, #f8fafc)" },
+            { hex: "#8b5cf6", rgb: "139, 92, 246",  grad: "linear-gradient(90deg, #f8fafc, #a78bfa, #f472b6, #f8fafc)" },
+            { hex: "#f43f5e", rgb: "244, 63, 94",   grad: "linear-gradient(90deg, #f8fafc, #fb7185, #fbbf24, #f8fafc)" },
+            { hex: "#0ea5e9", rgb: "14, 165, 233",  grad: "linear-gradient(90deg, #f8fafc, #38bdf8, #818cf8, #f8fafc)" },
+            { hex: "#eab308", rgb: "234, 179, 8",   grad: "linear-gradient(90deg, #f8fafc, #facc15, #fb7185, #f8fafc)" }
         ];
 
         function applyCurrentThemeColor() {
@@ -635,7 +657,7 @@
                         }
                     });
                 },
-                { threshold: 0.35 }
+                { threshold: 0.25 }
             );
 
             observer.observe(statsRow);
