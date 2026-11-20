@@ -1,164 +1,713 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almas Hossen - AI Engineering, Python Developer (FastAPI, Django) & DevOps Expert</title>
-    <!-- Tailwind CSS CDN -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALMAS HOSSEN — Full-Stack Web, AI & Backend Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            background-color: #060913;
-            color: #f1f5f9;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card:hover {
-            border-color: rgba(0, 245, 212, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(0, 245, 212, 0.15);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #00f5d4 0%, #00b4d8 50%, #7209b7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-border {
-            background: linear-gradient(90deg, #00f5d4, #00b4d8);
+        :root {
+            --bg-main: #050507;
+            --bg-box: #0e0e12;
+            --accent: #3b82f6;
+            --accent-rgb: 59, 130, 246;
         }
 
-        /* Smooth Left-Right Slide Animation for Top Badge */
-        @keyframes moveLeftRight {
+        body {
+            background-color: var(--bg-main);
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.6s ease;
+        }
+
+        ::selection {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .accent-text {
+            color: var(--accent);
+            transition: color 0.6s ease;
+        }
+
+        .accent-bg {
+            background-color: var(--accent);
+            color: #ffffff;
+            transition: background-color 0.6s ease, box-shadow 0.6s ease, transform 0.2s ease;
+        }
+
+        .accent-bg:hover {
+            filter: brightness(1.08);
+        }
+
+        .accent-border-hover:hover {
+            border-color: var(--accent) !important;
+        }
+
+        /* Custom Gol (Circular) Cursor */
+        #custom-gol-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 34px;
+            height: 34px;
+            border: 2px solid var(--accent);
+            border-radius: 9999px;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s ease, height 0.2s ease, border-color 0.6s ease, background-color 0.2s ease;
+            box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.35);
+        }
+
+        #custom-gol-cursor::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            transform: translate(-50%, -50%);
+            transition: background-color 0.6s ease;
+        }
+
+        #custom-gol-cursor.cursor-active {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(var(--accent-rgb), 0.12);
+        }
+
+        @media (pointer: coarse) {
+            #custom-gol-cursor {
+                display: none;
+            }
+        }
+
+        /* 1. Once on page open: photo drops from top and lands with a natural bounce */
+        @keyframes photoEntranceDropOnce {
             0% {
-                transform: translateX(-12px);
+                transform: translate3d(0px, -210px, 0px) scale(0.96, 1.04);
+                opacity: 0.7;
+            }
+            42% {
+                transform: translate3d(0px, 0px, 0px) scale(1.04, 0.94);
+                opacity: 1;
+            }
+            64% {
+                transform: translate3d(0px, -28px, 0px) scale(0.98, 1.02);
+            }
+            82% {
+                transform: translate3d(0px, 0px, 0px) scale(1.02, 0.97);
+            }
+            100% {
+                transform: translate3d(0px, 0px, 0px) scale(1, 1);
+                opacity: 1;
+            }
+        }
+
+        /* 2. After landing: photo gently floats and moves on its own */
+        @keyframes photoIdleFloat {
+            0% {
+                transform: translate3d(0px, 0px, 0px) rotate(0deg);
+            }
+            25% {
+                transform: translate3d(6px, -14px, 0px) rotate(1deg);
+            }
+            50% {
+                transform: translate3d(-4px, -6px, 0px) rotate(-0.8deg);
+            }
+            75% {
+                transform: translate3d(-7px, -16px, 0px) rotate(0.7deg);
+            }
+            100% {
+                transform: translate3d(0px, 0px, 0px) rotate(0deg);
+            }
+        }
+
+        /* Name jumps / bounces on its own */
+        @keyframes nameJump {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            15% {
+                transform: translateY(-16px);
+            }
+            30% {
+                transform: translateY(0px);
+            }
+            42% {
+                transform: translateY(-8px);
+            }
+            55% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Name color gradient sweep */
+        @keyframes nameColorSweep {
+            0% {
+                background-position: 0% 50%;
+                filter: drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.28));
+            }
+            50% {
+                background-position: 100% 50%;
+                filter: drop-shadow(0 0 16px rgba(var(--accent-rgb), 0.36));
+            }
+            100% {
+                background-position: 0% 50%;
+                filter: drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.28));
+            }
+        }
+
+        /* Title jumps / bounces slightly after name */
+        @keyframes titleJump {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            18% {
+                transform: translateY(-10px);
+            }
+            34% {
+                transform: translateY(0px);
+            }
+            46% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Navbar link subtle float */
+        @keyframes navItemFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* Top CV & Hire buttons float */
+        @keyframes topActionFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* Project cards float & move subtly on their own */
+        @keyframes projectCardDrift {
+            0%, 100% {
+                transform: translate3d(0px, 0px, 0px);
+            }
+            33% {
+                transform: translate3d(0px, -9px, 0px);
+            }
+            66% {
+                transform: translate3d(0px, -4px, 0px);
+            }
+        }
+
+        /* Standard refined floating & gradient contact submit button */
+        @keyframes contactBtnFloatRefined {
+            0% {
+                transform: translate3d(0px, 0px, 0px) scale(1);
+                background-position: 0% 50%;
+                box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.28);
+            }
+            50% {
+                transform: translate3d(0px, -7px, 0px) scale(1.012);
+                background-position: 100% 50%;
+                box-shadow: 0 12px 28px rgba(var(--accent-rgb), 0.36);
+            }
+            100% {
+                transform: translate3d(0px, 0px, 0px) scale(1);
+                background-position: 0% 50%;
+                box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.28);
+            }
+        }
+
+        /* Floating contact pills */
+        @keyframes contactPillFloat {
+            0%, 100% {
+                transform: translate3d(0px, 0px, 0px);
+            }
+            50% {
+                transform: translate3d(0px, -6px, 0px);
+            }
+        }
+
+        /* Project name moves left-to-right and right-to-left */
+        @keyframes projectNameSwing {
+            0%, 100% {
+                transform: translateX(-8px);
             }
             50% {
                 transform: translateX(12px);
             }
-            100% {
-                transform: translateX(-12px);
-            }
         }
 
-        .animate-slide-horizontal {
+        .auto-photo-motion {
+            animation:
+                photoEntranceDropOnce 1.15s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards,
+                photoIdleFloat 4.6s ease-in-out 1.15s infinite;
+            transform-origin: center bottom;
+            will-change: transform, opacity;
+        }
+
+        .auto-name-jump {
             display: inline-block;
-            animation: moveLeftRight 4s ease-in-out infinite;
+            animation: nameJump 2.8s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+            will-change: transform;
         }
 
-        /* Floating Up and Down Animation for Profile Picture */
-        @keyframes floatImage {
-            0%, 100% {
-                transform: translateY(0px) scale(1);
-                filter: drop-shadow(0 15px 25px rgba(0, 245, 212, 0.25));
-            }
-            50% {
-                transform: translateY(-12px) scale(1.02);
-                filter: drop-shadow(0 25px 35px rgba(0, 245, 212, 0.4));
-            }
+        .hero-name-color-anim {
+            display: inline-block;
+            background-image: linear-gradient(90deg, #f8fafc, #60a5fa, #a78bfa, #f8fafc);
+            background-size: 240% 240%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: nameJump 2.8s cubic-bezier(0.28, 0.84, 0.42, 1) infinite, nameColorSweep 5s ease-in-out infinite;
+            transition: background-image 0.6s ease;
+            will-change: transform, background-position, filter;
         }
 
-        .animate-float-floating {
-            animation: floatImage 4s ease-in-out infinite;
+        .auto-title-jump {
+            display: inline-block;
+            animation: titleJump 2.8s cubic-bezier(0.28, 0.84, 0.42, 1) 0.16s infinite;
+            will-change: transform;
+        }
+
+        .nav-link-effect {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: #d4d4d8;
+            animation: navItemFloat 3.2s ease-in-out infinite;
+            transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, text-shadow 0.25s ease;
+            will-change: transform;
+        }
+
+        .nav-link-effect:hover {
+            animation-play-state: paused;
+            color: var(--accent);
+            background-color: rgba(var(--accent-rgb), 0.12);
+            transform: translateY(-2px);
+            text-shadow: 0 0 12px rgba(var(--accent-rgb), 0.4);
+        }
+
+        .nav-cv-btn {
+            background: rgba(18, 18, 25, 0.92);
+            border: 1px solid rgba(var(--accent-rgb), 0.6);
+            color: #f8fafc;
+            box-shadow: 0 0 14px rgba(var(--accent-rgb), 0.2);
+            animation: topActionFloat 3s ease-in-out infinite;
+            transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            will-change: transform;
+        }
+
+        .nav-cv-btn:hover {
+            animation-play-state: paused;
+            transform: translateY(-3px) scale(1.04);
+            background: rgba(var(--accent-rgb), 0.16);
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.36);
+        }
+
+        .nav-hire-btn {
+            background-image: linear-gradient(135deg, var(--accent), #6366f1);
+            background-size: 200% 200%;
+            color: #ffffff;
+            box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.34);
+            animation: topActionFloat 2.8s ease-in-out infinite, nameColorSweep 5s ease-in-out infinite;
+            transition: transform 0.25s ease, filter 0.25s ease;
+            will-change: transform, background-position;
+        }
+
+        .nav-hire-btn:hover {
+            animation-play-state: paused;
+            transform: translateY(-3px) scale(1.05);
+            filter: brightness(1.08);
+        }
+
+        .project-card-anim {
+            animation: projectCardDrift 4.4s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .project-card-anim:hover {
+            animation-play-state: paused;
+            transform: translate3d(0px, -11px, 0px) scale(1.015);
+        }
+
+        .contact-rainbow-btn {
+            background-image: linear-gradient(135deg, var(--accent), #6366f1, #8b5cf6);
+            background-size: 220% 220%;
+            color: #ffffff;
+            animation: contactBtnFloatRefined 3.2s ease-in-out infinite;
+            transition: transform 0.25s ease, filter 0.25s ease;
+            will-change: transform, background-position, box-shadow;
+        }
+
+        .contact-rainbow-btn:hover {
+            animation-play-state: paused;
+            transform: translateY(-4px) scale(1.02);
+            filter: brightness(1.08);
+        }
+
+        .floating-contact-pill {
+            background: rgba(14, 14, 18, 0.94);
+            border: 1px solid rgba(var(--accent-rgb), 0.35);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 14px rgba(var(--accent-rgb), 0.14);
+            animation: contactPillFloat 3.4s ease-in-out infinite;
+            transition: border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease, transform 0.25s ease;
+            will-change: transform;
+        }
+
+        .floating-contact-pill:hover {
+            animation-play-state: paused;
+            transform: translateY(-6px) scale(1.02);
+            border-color: rgba(var(--accent-rgb), 0.85);
+            background: rgba(var(--accent-rgb), 0.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), 0 0 20px rgba(var(--accent-rgb), 0.28);
+        }
+
+        .project-title-move {
+            display: inline-block;
+            font-size: 1.25rem;
+            line-height: 1.3;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            background-size: 220% 220%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: projectNameSwing 3.2s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .project-card-anim:hover .project-title-move {
+            animation-play-state: paused;
+            transform: translateX(4px) scale(1.03);
+        }
+
+        /* Standard & refined color gradients for project titles */
+        .title-grad-1 {
+            background-image: linear-gradient(90deg, #60a5fa, #38bdf8, #a78bfa);
+        }
+        .title-grad-2 {
+            background-image: linear-gradient(90deg, #34d399, #2dd4bf, #60a5fa);
+        }
+        .title-grad-3 {
+            background-image: linear-gradient(90deg, #f472b6, #fb7185, #fbbf24);
+        }
+        .title-grad-4 {
+            background-image: linear-gradient(90deg, #a78bfa, #818cf8, #38bdf8);
+        }
+        .title-grad-5 {
+            background-image: linear-gradient(90deg, #fbbf24, #f59e0b, #fb7185);
+        }
+        .title-grad-6 {
+            background-image: linear-gradient(90deg, #38bdf8, #34d399, #a78bfa);
+        }
+
+        .stat-counter {
+            display: inline-block;
+            font-variant-numeric: tabular-nums;
+            transition: transform 0.25s ease;
+        }
+
+        .stat-counter.counting {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        .red-card-glow {
+            box-shadow: 0 -8px 26px -4px rgba(var(--accent-rgb), 0.28);
+            border-color: rgba(var(--accent-rgb), 0.4);
+            transition: border-color 0.6s ease, box-shadow 0.6s ease, transform 0.25s ease;
+        }
+
+        .red-card-glow:hover {
+            box-shadow: 0 0 32px rgba(var(--accent-rgb), 0.48);
+            border-color: rgba(var(--accent-rgb), 0.82);
+        }
+
+        .premium-solve-panel {
+            background: linear-gradient(160deg, rgba(16, 16, 22, 0.96), rgba(9, 9, 13, 0.98));
+            border: 1.5px solid rgba(var(--accent-rgb), 0.65);
+            box-shadow: 0 0 32px rgba(var(--accent-rgb), 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            animation: photoIdleFloat 4.6s ease-in-out infinite;
+            will-change: transform;
+            transition: border-color 0.6s ease, box-shadow 0.6s ease;
+        }
+
+        .solve-item-card {
+            background: rgba(18, 18, 25, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+        }
+
+        .solve-item-card:hover {
+            transform: translateX(4px);
+            border-color: rgba(var(--accent-rgb), 0.7);
+            background: rgba(var(--accent-rgb), 0.08);
         }
     </style>
 </head>
-<body class="selection:bg-[#00f5d4] selection:text-black antialiased overflow-x-hidden">
+<body class="antialiased">
 
-    <!-- BACKGROUND GLOW -->
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-[#00f5d4]/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-1/3 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <!-- Custom Gol Cursor -->
+    <div id="custom-gol-cursor"></div>
 
-    <!-- COMPONENTS LOAD CONTAINER -->
     <div id="navbar-container"></div>
     <div id="hero-container"></div>
-    <div id="about-container"></div>
-    <div id="solutions-container"></div>
+    <div id="solve-container"></div>
     <div id="projects-container"></div>
-    <div id="resume-container"></div>
-    <div id="skills-container"></div>
     <div id="contact-container"></div>
     <div id="footer-container"></div>
 
-    <!-- CV PREVIEW MODAL -->
-    <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="glass-card w-full max-w-4xl h-[85vh] rounded-2xl flex flex-col overflow-hidden border border-[#00f5d4]/40">
-            <div class="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-950/80">
-                <h3 class="text-lg font-bold text-[#00f5d4]">📄 Online CV Preview</h3>
-                <button onclick="closeCvModal()" class="text-slate-400 hover:text-white text-xl font-bold px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">✕</button>
+    <!-- CV MODAL -->
+    <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-[#0e0e12] w-full max-w-4xl h-[85vh] rounded-lg flex flex-col overflow-hidden" style="border: 1px solid rgba(var(--accent-rgb), 0.5);">
+            <div class="p-3.5 border-b border-white/10 flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-white">Online CV Preview</span>
+                <button onclick="closeCvModal()" class="text-xs px-2.5 py-1 rounded bg-white/10 text-white accent-bg transition">✕</button>
             </div>
-            <div class="flex-1 w-full bg-slate-900">
-                <iframe src="Almas_Hossen_Python_Backend_AI_Developer_CV.pdf" class="w-full h-full" frameborder="0"></iframe>
-            </div>
+            <iframe src="Almas_Hossen_Python_Backend_AI_Developer_CV.pdf" class="flex-1 w-full bg-zinc-950" frameborder="0"></iframe>
         </div>
     </div>
 
-    <!-- EMAILJS & SCRIPTS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
+    <script>
+        (function () {
             emailjs.init("w8QWEL3PV7zl4ePGq");
         })();
 
-        // Load Components Dynamically
-        async function loadComponent(id, file) {
-            try {
-                const response = await fetch(file);
-                if (response.ok) {
-                    document.getElementById(id).innerHTML = await response.text();
+        /* 1. Custom Gol Cursor Logic */
+        (function initGolCursor() {
+            const cursor = document.getElementById("custom-gol-cursor");
+            if (!cursor) return;
+
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+            let posX = mouseX;
+            let posY = mouseY;
+
+            window.addEventListener("mousemove", (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            document.addEventListener("mouseover", (e) => {
+                if (e.target.closest("a, button, input, textarea, .solve-item-card, .project-card-anim, .floating-contact-pill, .nav-link-effect, .nav-cv-btn, .nav-hire-btn")) {
+                    cursor.classList.add("cursor-active");
                 }
-            } catch (error) {
-                console.error(`Error loading ${file}:`, error);
+            });
+
+            document.addEventListener("mouseout", (e) => {
+                if (e.target.closest("a, button, input, textarea, .solve-item-card, .project-card-anim, .floating-contact-pill, .nav-link-effect, .nav-cv-btn, .nav-hire-btn")) {
+                    cursor.classList.remove("cursor-active");
+                }
+            });
+
+            function animateCursor() {
+                posX += (mouseX - posX) * 0.18;
+                posY += (mouseY - posY) * 0.18;
+                cursor.style.left = `${posX}px`;
+                cursor.style.top = `${posY}px`;
+                requestAnimationFrame(animateCursor);
             }
+            requestAnimationFrame(animateCursor);
+        })();
+
+        /* 2. Standard & Refined Auto Palette Every 5 Seconds */
+        let currentPaletteIndex = 0;
+        const colorPalette = [
+            { hex: "#3b82f6", rgb: "59, 130, 246",  grad: "linear-gradient(90deg, #f8fafc, #60a5fa, #a78bfa, #f8fafc)" },   // Sapphire Blue + Soft Violet
+            { hex: "#10b981", rgb: "16, 185, 129",  grad: "linear-gradient(90deg, #f8fafc, #34d399, #38bdf8, #f8fafc)" },   // Emerald Mint + Sky
+            { hex: "#8b5cf6", rgb: "139, 92, 246",  grad: "linear-gradient(90deg, #f8fafc, #a78bfa, #f472b6, #f8fafc)" },   // Royal Violet + Soft Rose
+            { hex: "#f43f5e", rgb: "244, 63, 94",   grad: "linear-gradient(90deg, #f8fafc, #fb7185, #fbbf24, #f8fafc)" },   // Rose Coral + Warm Gold
+            { hex: "#0ea5e9", rgb: "14, 165, 233",  grad: "linear-gradient(90deg, #f8fafc, #38bdf8, #818cf8, #f8fafc)" },   // Ocean Cyan + Indigo
+            { hex: "#eab308", rgb: "234, 179, 8",   grad: "linear-gradient(90deg, #f8fafc, #facc15, #fb7185, #f8fafc)" }    // Warm Gold + Rose
+        ];
+
+        function applyCurrentThemeColor() {
+            const item = colorPalette[currentPaletteIndex];
+            document.documentElement.style.setProperty("--accent", item.hex);
+            document.documentElement.style.setProperty("--accent-rgb", item.rgb);
+
+            document.querySelectorAll(".hero-name-color-anim").forEach((el) => {
+                el.style.backgroundImage = item.grad;
+            });
+
+            document.querySelectorAll("[data-auto-color='bg']").forEach((el) => {
+                el.style.backgroundColor = item.hex;
+                el.style.boxShadow = `0 0 22px rgba(${item.rgb}, 0.28)`;
+            });
+
+            document.querySelectorAll("[data-auto-color='text']").forEach((el) => {
+                el.style.color = item.hex;
+            });
+
+            document.querySelectorAll("[data-auto-color='border']").forEach((el) => {
+                el.style.borderColor = `rgba(${item.rgb}, 0.58)`;
+            });
         }
 
-        window.addEventListener('DOMContentLoaded', () => {
-            loadComponent('navbar-container', 'components/navbar.html');
-            loadComponent('hero-container', 'components/hero.html');
-            loadComponent('about-container', 'components/about.html');
-            loadComponent('solutions-container', 'components/solutions.html');
-            loadComponent('projects-container', 'components/projects.html');
-            loadComponent('resume-container', 'components/resume.html');
-            loadComponent('skills-container', 'components/skills.html');
-            loadComponent('contact-container', 'components/contact.html');
-            loadComponent('footer-container', 'components/footer.html');
-        });
+        (function initAutoColorCycle() {
+            applyCurrentThemeColor();
+            setInterval(() => {
+                currentPaletteIndex = (currentPaletteIndex + 1) % colorPalette.length;
+                applyCurrentThemeColor();
+            }, 5000);
+        })();
 
-        // CV Modal Functions
+        /* 3. Count From 0 When User Scrolls Into Stats Section */
+        function animateCounterElement(el, duration = 1200) {
+            const target = parseInt(el.dataset.target || "0", 10);
+            const prefix = el.dataset.prefix || "";
+            const suffix = el.dataset.suffix || "";
+
+            if (el._counterFrame) {
+                cancelAnimationFrame(el._counterFrame);
+            }
+
+            el.textContent = `${prefix}0${suffix}`;
+            el.classList.add("counting");
+
+            const startTime = performance.now();
+
+            function step(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const currentVal = Math.round(eased * target);
+
+                el.textContent = `${prefix}${currentVal}${suffix}`;
+
+                if (progress < 1) {
+                    el._counterFrame = requestAnimationFrame(step);
+                } else {
+                    el.textContent = `${prefix}${target}${suffix}`;
+                    el.classList.remove("counting");
+                }
+            }
+
+            el._counterFrame = requestAnimationFrame(step);
+        }
+
+        function initStatsCountUp() {
+            const statsRow = document.getElementById("projects-stats-row");
+            const counters = document.querySelectorAll(".stat-counter");
+            if (!statsRow || !counters.length) return;
+
+            counters.forEach((el) => {
+                const prefix = el.dataset.prefix || "";
+                const suffix = el.dataset.suffix || "";
+                el.textContent = `${prefix}0${suffix}`;
+            });
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            counters.forEach((el, idx) => {
+                                const dur = parseInt(el.dataset.duration || "1200", 10) + idx * 140;
+                                animateCounterElement(el, dur);
+                            });
+                        } else {
+                            counters.forEach((el) => {
+                                if (el._counterFrame) cancelAnimationFrame(el._counterFrame);
+                                const prefix = el.dataset.prefix || "";
+                                const suffix = el.dataset.suffix || "";
+                                el.textContent = `${prefix}0${suffix}`;
+                                el.classList.remove("counting");
+                            });
+                        }
+                    });
+                },
+                { threshold: 0.35 }
+            );
+
+            observer.observe(statsRow);
+        }
+
         function openCvModal() {
-            document.getElementById('cv-modal').classList.remove('hidden');
+            const modal = document.getElementById("cv-modal");
+            if (modal) modal.classList.remove("hidden");
         }
+
         function closeCvModal() {
-            document.getElementById('cv-modal').classList.add('hidden');
+            const modal = document.getElementById("cv-modal");
+            if (modal) modal.classList.add("hidden");
         }
 
-        // Contact Form Submission Handler (Event Delegation)
-        document.addEventListener('submit', function(event) {
-            if (event.target && event.target.id === 'contact-form') {
-                event.preventDefault();
-                const btn = document.getElementById('submit-btn');
-                const status = document.getElementById('form-status');
-                btn.innerText = 'Sending...';
+        function bindContactForm() {
+            const form = document.getElementById("contact-form");
+            if (!form || form.dataset.bound) return;
+            form.dataset.bound = "true";
 
-                emailjs.sendForm('service_uzsy639', 'template_tb6j5nh', event.target)
-                    .then(function() {
-                        btn.innerText = 'Send Message';
-                        status.classList.remove('hidden', 'text-red-400');
-                        status.classList.add('text-emerald-400');
-                        status.innerText = '✅ Message sent successfully! I will reply soon.';
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const btn = document.getElementById("submit-btn");
+                const status = document.getElementById("form-status");
+                if (btn) btn.innerText = "Sending...";
+
+                emailjs.sendForm("service_uzsy639", "template_tb6j5nh", event.target)
+                    .then(function () {
+                        if (btn) btn.innerText = "Send Message";
+                        if (status) {
+                            status.classList.remove("hidden", "text-red-400");
+                            status.classList.add("text-emerald-400");
+                            status.innerText = "✅ Message sent successfully!";
+                        }
                         event.target.reset();
                     })
-                    .catch(function(error) {
-                        btn.innerText = 'Send Message';
-                        status.classList.remove('hidden', 'text-emerald-400');
-                        status.classList.add('text-red-400');
-                        status.innerText = '❌ Failed to send message. Please try again.';
-                        console.error('FAILED...', error);
+                    .catch(function () {
+                        if (btn) btn.innerText = "Send Message";
+                        if (status) {
+                            status.classList.remove("hidden", "text-emerald-400");
+                            status.classList.add("text-red-400");
+                            status.innerText = "❌ Failed to send message. Please try again.";
+                        }
                     });
+            });
+        }
+
+        async function loadComponent(containerId, filePath, callback) {
+            try {
+                const res = await fetch(filePath);
+                if (!res.ok) return;
+                const html = await res.text();
+                const container = document.getElementById(containerId);
+                if (container) {
+                    container.innerHTML = html;
+                    applyCurrentThemeColor();
+                }
+                if (typeof callback === "function") callback();
+            } catch (err) {
+                console.warn(`Skipped optional/missing component ${filePath}:`, err);
             }
+        }
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            await Promise.all([
+                loadComponent("navbar-container", "components/navbar.html"),
+                loadComponent("hero-container", "components/hero.html"),
+                loadComponent("solve-container", "components/about.html"),
+                loadComponent("projects-container", "components/projects.html", initStatsCountUp),
+                loadComponent("contact-container", "components/contact.html", bindContactForm),
+                loadComponent("footer-container", "components/footer.html")
+            ]);
         });
     </script>
 </body>

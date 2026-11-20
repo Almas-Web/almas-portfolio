@@ -1,273 +1,253 @@
-<section id="featured" class="py-20 border-t border-slate-800/60 bg-slate-950/40">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center gap-3 mb-12">
-            <h2 class="text-3xl font-extrabold text-slate-100">Featured AI & Backend Projects</h2>
-            <div class="h-[2px] w-24 gradient-border rounded-full"></div>
+<section id="projects" class="py-20 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6 space-y-14">
+
+        <div id="projects-stats-row" class="grid grid-cols-3 gap-4 text-center max-w-2xl mx-auto">
+            <div>
+                <div
+                    data-target="3"
+                    data-suffix="+"
+                    data-duration="1000"
+                    class="stat-counter text-3xl sm:text-5xl font-black text-white"
+                >0+</div>
+                <div class="text-[10px] uppercase tracking-[0.2em] text-zinc-400 mt-1">New Web Apps</div>
+            </div>
+            <div>
+                <div
+                    data-target="13"
+                    data-suffix=""
+                    data-duration="1250"
+                    data-auto-color="text"
+                    class="stat-counter text-3xl sm:text-5xl font-black accent-text"
+                >0</div>
+                <div class="text-[10px] uppercase tracking-[0.2em] text-zinc-400 mt-1">Projects</div>
+            </div>
+            <div>
+                <div
+                    data-target="100"
+                    data-suffix="%"
+                    data-duration="1450"
+                    class="stat-counter text-3xl sm:text-5xl font-black text-white"
+                >0%</div>
+                <div class="text-[10px] uppercase tracking-[0.2em] text-zinc-400 mt-1">Deployed Ready</div>
+            </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="text-center">
+            <h2 class="auto-name-jump text-2xl sm:text-3xl font-black uppercase tracking-[0.18em] text-white">
+                PROJECTS<span data-auto-color="text" class="accent-text">.</span>
+            </h2>
+        </div>
 
-            <!-- =====================================================
-                 PROJECT 1 — AI CUSTOMER SUPPORT AGENT (TOP AI PROJECT)
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border border-[#00f5d4]/40">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <!-- 1. TASKFLOW SAAS -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 0s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">AI Autonomous Agent</span>
-                        <span class="text-xs text-cyan-400 font-medium">FastAPI & LLM</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">AI Customer Support Agent</h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <div data-auto-color="text" class="text-[10px] uppercase tracking-widest accent-text font-bold mb-1">Next.js 15 • FastAPI • Neon</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-1" style="animation-delay: 0s;">TaskFlow SaaS</span>
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
+                        Full-stack SaaS task management application built with Next.js 15, FastAPI, and Neon PostgreSQL, deployed across Vercel and Render with live data persistence.
+                    </p>
+                </div>
+                <div class="pt-3 border-t border-white/10 flex justify-between text-xs font-semibold">
+                    <a href="https://taskflow-saas-inky.vercel.app/" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">Live Demo →</a>
+                    <a href="https://github.com/Almas-Web/taskflow-saas.git" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white">GitHub →</a>
+                </div>
+            </div>
+
+            <!-- 2. AVENUE LUX -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 0.25s;">
+                <div>
+                    <div data-auto-color="text" class="text-[10px] uppercase tracking-widest accent-text font-bold mb-1">Next.js 15 • Supabase • SQL</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-2" style="animation-delay: 0.25s;">Avenue Lux</span>
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
+                        Video-first fashion store built with Next.js 15 and Supabase featuring SQL schema, security rules, storage buckets, video stage design system, and PKR / JazzCash / Easypaisa / COD support.
+                    </p>
+                </div>
+                <div class="pt-3 border-t border-white/10 flex justify-between text-xs font-semibold">
+                    <a href="https://avenue-lux.vercel.app/" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">Live Demo →</a>
+                    <a href="https://github.com/Almas-Web/avenue-lux.git" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white">GitHub →</a>
+                </div>
+            </div>
+
+            <!-- 3. FOUR-G APPARELS LTD. -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 0.5s;">
+                <div>
+                    <div data-auto-color="text" class="text-[10px] uppercase tracking-widest accent-text font-bold mb-1">HTML5 • CSS3 • Vanilla JS</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-3" style="animation-delay: 0.5s;">Four-G Apparels Ltd.</span>
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
+                        Responsive multi-page garments buying, sourcing, and product development website with modular CSS architecture, dynamic theme switcher, 3D tilt cards, and CSP/SEO optimization.
+                    </p>
+                </div>
+                <div class="pt-3 border-t border-white/10 flex justify-between text-xs font-semibold">
+                    <a href="https://four-g-apparels.vercel.app/" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">Live Demo →</a>
+                    <a href="https://github.com/Almas-Web/four-g-apparels.git" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white">GitHub →</a>
+                </div>
+            </div>
+
+            <!-- 4. AI CUSTOMER SUPPORT AGENT -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 0.75s;">
+                <div>
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">FastAPI • LLM Tool Calling</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-4" style="animation-delay: 0.75s;">AI Customer Support Agent</span>
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         AI-powered customer support agent built with FastAPI, PostgreSQL, SQLAlchemy, and LLM tool calling for automated customer, payment, invoice, and ticket management.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">LLM Tool Calling</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">SQLAlchemy</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/ai-customer-support-agent.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/ai-customer-support-agent.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 2 — AI SUPPORT ASSISTANT
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border border-[#00f5d4]/40">
+            <!-- 5. AI SUPPORT & BILLING ASSISTANT -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 1s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">AI Billing Assistant</span>
-                        <span class="text-xs text-cyan-400 font-medium">Function Calling</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">AI Support & Billing Assistant</h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">FastAPI • Function Calling</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-5" style="animation-delay: 1s;">AI Support & Billing Assistant</span>
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         AI-powered customer support and billing assistant built with FastAPI, PostgreSQL, SQLAlchemy, and LLM function calling.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Function Calling</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">SQLAlchemy</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/ai-support-assistant.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/ai-support-assistant.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 3 — AI DOCUMENT QA API
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border border-[#00f5d4]/40">
+            <!-- 6. AI DOCUMENT Q&A API -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 1.25s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">RAG & Vector Search</span>
-                        <span class="text-xs text-purple-400 font-medium">Local Embeddings</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">AI Document Q&A API</h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">RAG • Vector Search</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-6" style="animation-delay: 1.25s;">AI Document Q&A API</span>
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         RAG-based Document Q&A API built with FastAPI, local embeddings, vector search, and LLMs for contextual information lookup.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">RAG</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Vector Search</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/ai-document-qa-api.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/ai-document-qa-api.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 4 — AI EMAIL ANALYZER API
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border border-[#00f5d4]/40">
+            <!-- 7. AI EMAIL ANALYZER API -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 1.5s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">Google Gemini AI</span>
-                        <span class="text-xs text-purple-400 font-medium">Structured Intelligence</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">AI Email Analyzer API</h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">Google Gemini AI • FastAPI</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-1" style="animation-delay: 1.5s;">AI Email Analyzer API</span>
+                    </h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         Production-grade FastAPI backend powered by Google Gemini AI for advanced email parsing, structured intelligence, and LLM-driven workflows.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Google Gemini AI</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">NLP Parsing</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/ai-email-analyzer-api.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/ai-email-analyzer-api.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 5 — SUPPORTFLOW (PREVIOUS)
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <!-- 8. SUPPORTFLOW -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 1.75s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                            Multi-Tenant Support & SLA API
-                        </span>
-                        <span class="text-xs text-emerald-400 font-medium">Production Architecture</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">
-                        SupportFlow — Multi-Tenant Customer Support & SLA Platform
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">Django DRF • Docker • Terraform</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-2" style="animation-delay: 1.75s;">SupportFlow — Multi-Tenant Support & SLA Platform</span>
                     </h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         A production-oriented multi-tenant customer support and SLA management backend built with Django REST Framework, PostgreSQL, Docker, Nginx, and Terraform.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Django DRF</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Docker</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/supportflow.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/supportflow.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 6 — SAAS BILLING (PREVIOUS)
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <!-- 9. SAAS BILLING API -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 2s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                            SaaS Billing & Subscriptions
-                        </span>
-                        <span class="text-xs text-emerald-400 font-medium">Production Deployed</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">
-                        SaaS Billing & Subscription REST API
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">Django DRF • PostgreSQL • Stripe</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-3" style="animation-delay: 2s;">SaaS Billing & Subscription REST API</span>
                     </h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         A production-ready SaaS Billing & Subscription REST API featuring subscription plans, customer subscriptions, projects, payment processing foundation, invoice generation, PDF downloads, usage tracking, and CI/CD.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Django DRF</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Stripe</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/saas-billing-api.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/saas-billing-api.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 7 — COMMERCEHUB (PREVIOUS)
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <!-- 10. COMMERCEHUB -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 2.25s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                            Django Production API
-                        </span>
-                        <span class="text-xs text-emerald-400 font-medium">187 Tests / 97% Coverage</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">
-                        CommerceHub — E-Commerce API
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">Django DRF • Redis & Celery</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-4" style="animation-delay: 2.25s;">CommerceHub — E-Commerce API</span>
                     </h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         A production-ready e-commerce backend supporting multi-role permissions for Customer, Seller, and Admin with cart, wishlist, orders, payments, reviews, and automated testing.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Django DRF</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Redis & Celery</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/CommerceHub.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/CommerceHub.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 8 — BLOG MANAGEMENT (PREVIOUS)
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <!-- 11. BLOG MANAGEMENT REST API -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 2.5s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                            Production Backend
-                        </span>
-                        <span class="text-xs text-slate-400">Render Deployed</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">
-                        Blog Management REST API
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">Django DRF • Docker • CI/CD</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-5" style="animation-delay: 2.5s;">Blog Management REST API</span>
                     </h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         A production backend built with Django REST Framework, Docker, PostgreSQL, and CI/CD. Features JWT authentication, email verification, password recovery, rate limiting, and content management.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Django DRF</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">Docker</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/django-blog-management-system.git" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/django-blog-management-system.git" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 9 — TEAMFLOW (PREVIOUS)
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <!-- 12. TEAMFLOW API -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 2.75s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                            FastAPI Architecture
-                        </span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">
-                        TeamFlow API — Project & Team Collaboration
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">FastAPI • SQLAlchemy • PostgreSQL</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-6" style="animation-delay: 2.75s;">TeamFlow API — Project & Team Collaboration</span>
                     </h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         A FastAPI backend for project management and team collaboration with workspace/task management, Redis caching, background workers, and monitoring architecture.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">SQLAlchemy</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/teamflow-api" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/teamflow-api" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
-            <!-- =====================================================
-                 PROJECT 10 — MULTI VENDOR (PREVIOUS)
-            ====================================================== -->
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+            <!-- 13. MULTI-VENDOR E-COMMERCE REST API -->
+            <div class="project-card-anim bg-[#0e0e12] rounded-lg p-5 border red-card-glow flex flex-col justify-between" style="animation-delay: 3s;">
                 <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                            Multi-Vendor FastAPI
-                        </span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">
-                        Multi-Vendor E-Commerce REST API
+                    <div class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1">FastAPI • SQLAlchemy • PostgreSQL</div>
+                    <h3 class="mb-2 overflow-hidden">
+                        <span class="project-title-move title-grad-1" style="animation-delay: 3s;">Multi-Vendor E-Commerce REST API</span>
                     </h3>
-                    <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-3">
                         A multi-vendor marketplace REST API designed with FastAPI. Supports Admin, Vendor, and Customer roles with product CRUD, cart handling, address management, and access control.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">FastAPI</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">SQLAlchemy</span>
-                        <span class="text-[11px] bg-slate-800 px-2.5 py-1 rounded text-slate-300">PostgreSQL</span>
-                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-800/80 flex justify-end items-center text-xs font-semibold">
-                    <a href="https://github.com/Almas-Web/multi-vendor-ecommerce-api" target="_blank" rel="noopener noreferrer" class="text-[#00f5d4] hover:underline">📂 GitHub Repo →</a>
+                <div class="pt-3 border-t border-white/10 flex justify-end text-xs font-semibold">
+                    <a href="https://github.com/Almas-Web/multi-vendor-ecommerce-api" target="_blank" rel="noopener noreferrer" data-auto-color="text" class="accent-text hover:underline">GitHub →</a>
                 </div>
             </div>
 
