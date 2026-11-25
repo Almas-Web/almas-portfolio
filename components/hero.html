@@ -1,120 +1,128 @@
-<section id="hero" class="relative min-h-screen pt-20 pb-12 sm:pt-20 sm:pb-14 flex items-center overflow-hidden bg-[#050507]">
-    <div
-        class="absolute inset-0 pointer-events-none transition-all duration-700"
-        style="
-            background: radial-gradient(circle at 72% 50%, rgba(var(--accent-rgb), 0.16) 0%, rgba(var(--accent-rgb), 0.05) 35%, transparent 65%);
-        "
-    ></div>
+<section id="hero" class="relative min-h-screen pt-20 pb-14 sm:pt-24 sm:pb-16 flex items-end justify-center overflow-hidden bg-[#111111] text-[#F4EFE5]">
+    <!-- Top & Face Area Cleanly Exposed; Deep Dark Gradient Below Chin For High Readability -->
+    <div class="absolute inset-0 pointer-events-none">
+        <img
+            src="profile.jpg"
+            alt="Almas Hossen"
+            class="w-full h-full object-cover object-[50%_14%] opacity-95 contrast-110"
+        />
+        <div
+            class="absolute inset-0"
+            style="
+                background: linear-gradient(
+                    to bottom,
+                    rgba(17, 17, 17, 0.02) 0%,
+                    rgba(17, 17, 17, 0.06) 44%,
+                    rgba(17, 17, 17, 0.76) 60%,
+                    rgba(17, 17, 17, 0.95) 74%,
+                    #111111 86%,
+                    #111111 100%
+                );
+            "
+        ></div>
+    </div>
 
-    <div class="max-w-6xl w-full mx-auto px-4 sm:px-6 grid md:grid-cols-12 gap-8 md:gap-10 items-center relative z-10">
-        <!-- Left: Name -> Title -> About -> Full Skills -> Primary CTAs -> Social/Contact Buttons -->
-        <div class="md:col-span-7 space-y-3.5 sm:space-y-4">
-            <!-- 1. Big Name With Standard Color Sweep & Periodic Palette Shift -->
-            <div>
-                <h1 class="hero-name-color-anim text-[2.15rem] sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[1.05]">
-                    ALMAS HOSSEN
-                </h1>
-            </div>
+    <!-- All Hero Content Positioned Below Chin: Name -> Title -> About -->
+    <div class="max-w-5xl w-full mx-auto px-4 sm:px-6 pt-72 sm:pt-88 lg:pt-96 relative z-10 text-center space-y-4 sm:space-y-5">
+        <!-- 1. Name Below Chin -->
+        <h1
+            class="hero-name-color-anim text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-[-0.015em] leading-[1.06] text-[#FAF6EE] drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+            style="font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;"
+        >
+            <span>ALMAS </span>
+            <span class="italic font-light text-[#E5C687]">HOSSEN</span>
+        </h1>
 
-            <!-- 2. Title Below Name -->
-            <div>
-                <p class="auto-title-jump text-xs sm:text-base uppercase tracking-[0.14em] sm:tracking-[0.2em] font-bold accent-text leading-snug" data-auto-color="text">
-                    Full-Stack Web Developer • Next.js • Java • CSS • Tailwind • FastAPI • Django • AI & DevOps
-                </p>
-            </div>
+        <!-- 2. Title Below Name -->
+        <p class="auto-title-jump text-sm sm:text-base lg:text-lg uppercase tracking-[0.14em] text-[#E5C687] font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]" data-auto-color="text">
+            Full-Stack Web Developer • Next.js • Java • CSS • Tailwind • FastAPI • Django • AI &amp; DevOps
+        </p>
 
-            <!-- 3. About Below Title -->
-            <div class="max-w-2xl">
-                <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                    I am Almas Hossen — an AI Engineer and Backend & DevOps Developer alongside full-stack web engineering, building modern web apps, SaaS platforms, AI agents, RAG pipelines, and production cloud APIs.
-                </p>
-            </div>
-
-            <!-- 4. All Skills Together Below About -->
-            <div class="pt-0.5 flex flex-wrap gap-1.5 sm:gap-2 max-w-2xl">
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">Next.js 15 & React</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">Java & Python</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">HTML5, CSS3 & Tailwind CSS</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">Vanilla JS</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">FastAPI & Django DRF</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">JWT, RBAC & SQLAlchemy</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">Google Gemini AI & Tool Calling</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">RAG & Vector Search</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">PostgreSQL, Neon & Supabase SQL/RLS</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">Docker, Nginx & Terraform</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">Redis, Celery & CI/CD</span>
-                <span data-auto-color="border" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-[#0e0e12] border border-white/10 text-[11px] sm:text-xs font-semibold text-zinc-200 transition">Vercel & Render</span>
-            </div>
-
-            <!-- 5. View Projects & Contact Me Buttons -->
-            <div class="pt-1.5 flex flex-wrap gap-2.5 sm:gap-3">
-                <a href="#projects" data-auto-color="bg" class="px-4 py-2.5 rounded accent-bg text-xs font-bold uppercase tracking-wider">
-                    View Projects
-                </a>
-                <a href="#contact" data-auto-color="border" class="px-4 py-2.5 rounded border border-white/15 text-zinc-200 text-xs font-bold uppercase tracking-wider transition">
-                    Contact Me
-                </a>
-            </div>
-
-            <!-- 6. 4 Refined Floating Contact & Social Buttons Below View Projects / Contact Me -->
-            <div class="pt-1.5 grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-2xl text-xs font-semibold">
-                <a href="https://github.com/Almas-Web" target="_blank" rel="noopener noreferrer"
-                   class="floating-contact-pill flex items-center justify-between px-3.5 py-2.5 rounded-lg text-white"
-                   style="animation-delay: 0s; border-color: rgba(59, 130, 246, 0.45); background: linear-gradient(90deg, rgba(59, 130, 246, 0.12), rgba(14, 14, 18, 0.94));">
-                    <span class="bg-gradient-to-r from-sky-300 via-blue-400 to-indigo-300 bg-clip-text text-transparent font-bold truncate pr-2">
-                        GitHub — Almas-Web
-                    </span>
-                    <span class="text-sky-400 font-bold shrink-0">→</span>
-                </a>
-
-                <a href="https://www.linkedin.com/in/almas-hossen-29285b358" target="_blank" rel="noopener noreferrer"
-                   class="floating-contact-pill flex items-center justify-between px-3.5 py-2.5 rounded-lg text-white"
-                   style="animation-delay: 0.25s; border-color: rgba(139, 92, 246, 0.45); background: linear-gradient(90deg, rgba(139, 92, 246, 0.12), rgba(14, 14, 18, 0.94));">
-                    <span class="bg-gradient-to-r from-violet-300 via-purple-300 to-pink-300 bg-clip-text text-transparent font-bold truncate pr-2">
-                        LinkedIn — almas-hossen
-                    </span>
-                    <span class="text-violet-300 font-bold shrink-0">→</span>
-                </a>
-
-                <a href="https://wa.me/8801331438063" target="_blank" rel="noopener noreferrer"
-                   class="floating-contact-pill flex items-center justify-between px-3.5 py-2.5 rounded-lg text-white"
-                   style="animation-delay: 0.5s; border-color: rgba(16, 185, 129, 0.45); background: linear-gradient(90deg, rgba(16, 185, 129, 0.12), rgba(14, 14, 18, 0.94));">
-                    <span class="bg-gradient-to-r from-emerald-300 via-teal-300 to-sky-300 bg-clip-text text-transparent font-bold truncate pr-2">
-                        WhatsApp — +880 1331-438063
-                    </span>
-                    <span class="text-emerald-300 font-bold shrink-0">→</span>
-                </a>
-
-                <a href="mailto:almashossen028@gmail.com"
-                   class="floating-contact-pill flex items-center justify-between px-3.5 py-2.5 rounded-lg text-white"
-                   style="animation-delay: 0.75s; border-color: rgba(244, 63, 94, 0.45); background: linear-gradient(90deg, rgba(244, 63, 94, 0.12), rgba(14, 14, 18, 0.94));">
-                    <span class="bg-gradient-to-r from-rose-300 via-amber-200 to-amber-300 bg-clip-text text-transparent font-bold truncate pr-2">
-                        Email — almashossen028@gmail.com
-                    </span>
-                    <span class="text-rose-300 font-bold shrink-0">→</span>
-                </a>
-            </div>
+        <!-- 3. About Below Title -->
+        <div class="max-w-3xl mx-auto">
+            <p class="text-base sm:text-lg lg:text-xl text-[#F4EFE5] leading-relaxed font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+                I am Almas Hossen — an AI Engineer and Backend &amp; DevOps Developer alongside full-stack web engineering, building modern web apps, SaaS platforms, AI agents, RAG pipelines, and production cloud APIs.
+            </p>
         </div>
 
-        <!-- Right: Photo Dropping Once From Top & Bouncing, Then Gently Floating -->
-        <div class="md:col-span-5 flex justify-center md:justify-end relative pt-2 md:pt-0">
-            <div
-                class="auto-photo-motion relative w-56 sm:w-72 md:w-[22rem] aspect-[3/4] overflow-hidden rounded-xl"
-                style="
-                    border: 1.5px solid rgba(var(--accent-rgb), 0.6);
-                    box-shadow: 0 0 28px rgba(var(--accent-rgb), 0.22);
-                "
+        <!-- Primary CTAs + Arrow + WhatsApp, LinkedIn -> (Gap) -> GitHub -->
+        <div class="pt-0.5 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <a
+                href="#projects"
+                data-auto-color="bg"
+                class="px-6 sm:px-7 py-2.5 sm:py-3 bg-[#D4B26A] hover:bg-[#c5a157] text-[#111111] text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.65)] transition"
             >
-                <img
-                    src="profile.jpg"
-                    alt="Almas Hossen"
-                    class="w-full h-full object-cover object-top contrast-110"
-                />
-                <div
-                    class="absolute inset-0 pointer-events-none"
-                    style="background: linear-gradient(to top, rgba(5, 5, 7, 0.55), transparent 55%);"
-                ></div>
+                View Projects
+            </a>
+            <a
+                href="#contact"
+                data-auto-color="border"
+                class="px-6 sm:px-7 py-2.5 sm:py-3 bg-[#18181c]/95 hover:bg-[#232329] text-[#FAF6EE] border border-[#F4EFE5]/40 hover:border-[#E5C687] text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.65)] transition"
+            >
+                Contact Me
+            </a>
+
+            <!-- Arrow Sign -->
+            <span class="text-[#E5C687] text-lg sm:text-xl font-bold select-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">→</span>
+
+            <!-- Contact Platforms: WhatsApp & LinkedIn -->
+            <div class="flex items-center justify-center gap-2.5 sm:gap-3">
+                <a
+                    href="https://wa.me/8801331438063"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp — +880 1331-438063"
+                    title="WhatsApp — +880 1331-438063"
+                    class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#25d366] text-[#08130c] border border-white/30 hover:brightness-110 flex items-center justify-center shadow-[0_6px_18px_rgba(0,0,0,0.75)] hover:-translate-y-0.5 transition"
+                >
+                    <i class="fa-brands fa-whatsapp text-lg sm:text-xl leading-none"></i>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/almas-hossen-29285b358"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn — almas-hossen"
+                    title="LinkedIn — almas-hossen"
+                    class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#0a66c2] text-white border border-white/30 hover:brightness-110 flex items-center justify-center shadow-[0_6px_18px_rgba(0,0,0,0.75)] hover:-translate-y-0.5 transition"
+                >
+                    <i class="fa-brands fa-linkedin-in text-base sm:text-lg leading-none"></i>
+                </a>
             </div>
+
+            <!-- Gap Before GitHub -->
+            <span class="w-3 sm:w-5 inline-block select-none" aria-hidden="true"></span>
+
+            <!-- GitHub Profile Link -->
+            <a
+                href="https://github.com/Almas-Web"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub — Almas-Web"
+                title="GitHub — Almas-Web"
+                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#f4f4f5] text-[#111111] border border-white/30 hover:bg-[#E5C687] hover:text-[#111111] flex items-center justify-center shadow-[0_6px_18px_rgba(0,0,0,0.75)] hover:-translate-y-0.5 transition"
+            >
+                <i class="fa-brands fa-github text-lg sm:text-xl leading-none"></i>
+            </a>
+        </div>
+
+        <!-- Skills -->
+        <div class="pt-1 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-4xl mx-auto">
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Next.js 15 &amp; React</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Java &amp; Python</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">HTML5, CSS3 &amp; Tailwind CSS</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Vanilla JS</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">FastAPI &amp; Django DRF</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">JWT, RBAC &amp; SQLAlchemy</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Google Gemini AI &amp; Tool Calling</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">RAG &amp; Vector Search</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">PostgreSQL, Neon &amp; Supabase SQL/RLS</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Docker, Nginx &amp; Terraform</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Redis, Celery &amp; CI/CD</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Vercel &amp; Render</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Shopify &amp; Custom Liquid</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">REST APIs &amp; WebSockets</span>
+            <span data-auto-color="border" class="px-2.5 py-1 rounded-sm bg-[#16161b] border border-white/15 text-[11px] text-[#F4EFE5]">Git, Linux &amp; pytest</span>
         </div>
     </div>
 </section>
